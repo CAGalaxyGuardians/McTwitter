@@ -6,23 +6,26 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
-- ruby 2.4.0
+  * ruby 2.4.0
 
-* gem
-gem 'devise'
-gem 'bootstrap-sass', '~> 3.3.6'
-gem 'jquery-rails'
-gem 'acts_as_votable', '~> 0.10.0'
-gem "font-awesome-rails"
+  * gem
+    ```
+    gem 'devise'
+    gem 'bootstrap-sass', '~> 3.3.6'
+    gem 'jquery-rails'
+    gem 'acts_as_votable', '~> 0.10.0'
+    gem "font-awesome-rails"
+    ```
 
-* Database initialization
-  - Nuggets => this is for the main feed
-  - User:devise => this is User
-  - acts_as_votable => votable(like,unlike)
+  * Database initialization
+    - Nuggets => this is for the main feed
+    - User:devise => this is User
+    - acts_as_votable => votable(like,unlike)
 
-* gem instraction acts_as_votable
-https://github.com/ryanto/acts_as_votable
+  * [gem instraction acts_as_votable](https://github.com/ryanto/acts_as_votable)
+
 1. gem install
+
 2. generate migration file  => rails generate acts_as_votable:migration
 3. migrate => rake db:migrate
 4. models =>  add "acts_as_votable" and "belongs_to :user" to Nugets models and user model add "has_many: nuggets"
