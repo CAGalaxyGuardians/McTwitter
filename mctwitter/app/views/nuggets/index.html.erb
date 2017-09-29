@@ -18,9 +18,30 @@
         <td><%= link_to 'Edit', edit_nugget_path(nugget) %></td>
         <td><%= link_to 'Destroy', nugget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+
+      <td class="btn-group" data-toggle="buttons">
+          <!-- font-awesome -->
+           <%= link_to like_nugget_path(nugget), method: :put, class: "btn btn-outline-primary btn-sm" do %>
+             <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+             nuggets
+             <%= nugget.get_upvotes.size %>
+           <% end %>
+           <%= link_to dislike_nugget_path(nugget), method: :put, class: "btn btn-outline-primary btn-sm" do %>
+             <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+             unnugget
+             <%= nugget.get_downvotes.size %>
+          <% end %>
+        </td>
+        <br>
+
     <% end %>
   </tbody>
 </table>
+
+
+
+
+
 
 <br>
 
