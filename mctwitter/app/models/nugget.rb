@@ -1,0 +1,2 @@
+class Nugget < ApplicationRecord
+end
