@@ -6,6 +6,7 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+- ruby 2.4.0
 
 * System dependencies
 
@@ -14,6 +15,8 @@ Things you may want to cover:
 * Database creation
 
 * Database initialization
+  - Nuggets => this is for the main feed
+  - User:devise => this is User
 
 * How to run the test suite
 
