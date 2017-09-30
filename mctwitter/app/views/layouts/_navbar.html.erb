@@ -1,10 +1,9 @@
 
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="nav-link active">
-  <!-- link_to image_tag("logo.png", :type => :upload,
-            :width => 50, :height => 50, :crop => :fill), root_path -->
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -19,4 +18,27 @@
         <a class="nav-link disabled" href="#"><%= link_to 'sign in', new_user_session_path  %> </a>
     <% end %>
   </div>
+</nav> -->
+
+<!-- navigation -->
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark small-screen-nav">
+
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <% if user_signed_in? %>
+          <a class="nav-link active new-nugget-button" href="nuggets/new"><i class="fa fa-plus-circle fa-5x" aria-hidden="true"></i></a>
+          <a class="nav-link" href="#"><%= link_to 'Account',  edit_user_registration_path %> </a>
+          <a class="nav-link" href="#"><%= link_to 'sign out', destroy_user_session_path, :method => :delete  %></a>
+      <% else %>
+          <a class="nav-link disabled" href="#"><%= link_to 'sign up', new_user_registration_path  %> </a>
+          <a class="nav-link disabled" href="#"><%= link_to 'sign in', new_user_session_path  %> </a>
+      <% end %>
+    </div>
+
+  </div><!-- end container -->
 </nav>
