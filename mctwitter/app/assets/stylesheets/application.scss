@@ -4,9 +4,28 @@
 @import "font-awesome";
 @import 'rails_emoji_picker';
 
+// MAIN LOGIN/SIGN UP PAGE
+.main {
+  background-image: url("background_image/blue_bg_landscape.gif");
+}
+// END MAIN LOGIN/SIGN UP PAGE
+
 // NUGGETS INDEX.HTML.ERB
+.nugget-feed-bg {
+  background-image: url("background_image/orange_bg_happy.gif");
+  background-attachment: fixed;
+}
+
 .nugget-heading {
   text-align: center;
+}
+
+.new-nugget-button {
+  color: rgba(0,0,0,0.75);
+}
+
+.new-nugget-button:hover {
+  color: black;
 }
 
 table {
@@ -27,8 +46,7 @@ table {
 	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
 	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
 }
-.like-nugget:hover,
-.like-nugget:focus {
+.like-nugget{
 	-webkit-animation-name: spaceboots;
 	-webkit-animation-duration: 0.8s;
 	-webkit-transform-origin:50% 50%;
