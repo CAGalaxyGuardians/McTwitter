@@ -5,10 +5,18 @@
 
   <div class="container">
 
-    <a class="new-nugget-button" href="nuggets/new"><i class="fa fa-plus-circle fa-5x" aria-hidden="true"></i></a> <!-- this is the same as link to 'new nugget', new_nugget_path  -->
-    <!-- <%= link_to 'New Nugget', new_nugget_path %> -->
+    <div class="row">
 
-    <h1 class="nugget-heading">Nuggets</h1>
+      <div class="col">
+        <a class="new-nugget-button" href="nuggets/new"><i class="fa fa-plus-circle fa-5x" aria-hidden="true"></i></a> <!-- this is the same as link to 'new nugget', new_nugget_path  -->
+        <!-- <%= link_to 'New Nugget', new_nugget_path %> -->
+      </div>
+
+      <div class="col">
+        <h1 class="nugget-heading">Nuggets</h1>
+      </div>
+
+    </div>
 
     <table>
       <thead>
@@ -20,7 +28,7 @@
 
       <tbody>
         <% @nuggets.each do |nugget| %>
-          <tr>
+          <tr class="indv-nugget-row">
             <td><%= nugget.message %></td>
             <td><%= link_to 'Show', nugget %></td>
             <td><%= link_to 'Edit', edit_nugget_path(nugget) %></td>
@@ -30,12 +38,12 @@
           <td class="btn-group" data-toggle="buttons">
               <!-- font-awesome -->
                <%= link_to like_nugget_path(nugget), method: :put, class: "btn btn-outline-primary btn-sm like-nugget" do %>
-                 <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                 <i class="fa fa-thumbs-o-up" onclick="validateForm(event)" aria-hidden="true"></i>
                  nuggets
                  <%= nugget.get_upvotes.size %>
                <% end %>
                <%= link_to dislike_nugget_path(nugget), method: :put, class: "btn btn-outline-primary btn-sm like-nugget" do %>
-                 <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                 <i class="fa fa-thumbs-o-down" onclick="validateForm(event)" aria-hidden="true"></i>
                  unnugget
                  <%= nugget.get_downvotes.size %>
               <% end %>
@@ -49,3 +57,6 @@
   </div> <!-- end container div -->
 
 </div> <!-- end nugget-feed-bg -->
+
+<script type="text/javascript" src="prevent_reload.js"></script>
+<script type="text/javascript" src="timeline.js"></script>
