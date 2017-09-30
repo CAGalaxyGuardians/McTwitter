@@ -43,8 +43,8 @@ html, body {
   // z-index: 1;
 }
 
-.new-nugget-button:hover {
-  color: black;
+.new-nugget-button:visited {
+  color: rgba(255,195,0,0.95);
 }
 
 /* TIMELINE
@@ -210,8 +210,15 @@ html, body {
   height: 100%;
   min-height: 100vh;
 }
+
+.new-nugget-row {
+  margin-top: 80px;
+}
+
 .new-nugget-heading {
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .back-nugget-button {
@@ -225,4 +232,5 @@ html, body {
 .new-nugget-form {
   margin: 0 auto;
 }
+
 // END NEW/NUGGETS NEW.HTML.ERB
