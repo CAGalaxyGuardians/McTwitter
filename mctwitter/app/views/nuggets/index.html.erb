@@ -1,48 +1,50 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Nuggets</h1>
+<div class="container">
 
-<table>
-  <thead>
-    <tr>
-      <th>Message</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <i class="fa fa-plus-circle fa-5x" aria-hidden="true"></i>
 
-  <tbody>
-    <% @nuggets.each do |nugget| %>
+  <h1 class="nugget-heading">Nuggets</h1>
+
+  <table>
+    <thead>
       <tr>
-        <td><%= nugget.message %></td>
-        <td><%= link_to 'Show', nugget %></td>
-        <td><%= link_to 'Edit', edit_nugget_path(nugget) %></td>
-        <td><%= link_to 'Destroy', nugget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Message</th>
+        <th colspan="3"></th>
       </tr>
+    </thead>
 
-      <td class="btn-group" data-toggle="buttons">
-          <!-- font-awesome -->
-           <%= link_to like_nugget_path(nugget), method: :put, class: "btn btn-outline-primary btn-sm" do %>
-             <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-             nuggets
-             <%= nugget.get_upvotes.size %>
-           <% end %>
-           <%= link_to dislike_nugget_path(nugget), method: :put, class: "btn btn-outline-primary btn-sm" do %>
-             <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-             unnugget
-             <%= nugget.get_downvotes.size %>
-          <% end %>
+    <tbody>
+      <% @nuggets.each do |nugget| %>
+        <tr>
+          <td><%= nugget.message %></td>
+          <td><%= link_to 'Show', nugget %></td>
+          <td><%= link_to 'Edit', edit_nugget_path(nugget) %></td>
+          <td><%= link_to 'Destroy', nugget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+
+        <td class="btn-group" data-toggle="buttons">
+            <!-- font-awesome -->
+             <%= link_to like_nugget_path(nugget), method: :put, class: "btn btn-outline-primary btn-sm like-nugget" do %>
+               <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+               nuggets
+               <%= nugget.get_upvotes.size %>
+             <% end %>
+             <%= link_to dislike_nugget_path(nugget), method: :put, class: "btn btn-outline-primary btn-sm like-nugget" do %>
+               <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+               unnugget
+               <%= nugget.get_downvotes.size %>
+            <% end %>
         </td>
         <br>
 
-    <% end %>
-  </tbody>
-</table>
+      <% end %> <!-- end @nuggets.each do loop -->
+    </tbody> <!-- end tbody -->
+  </table> <!-- end table -->
 
 
+  <br>
 
+  <%= link_to 'New Nugget', new_nugget_path %>
 
-
-
-<br>
-
-<%= link_to 'New Nugget', new_nugget_path %>
+</div> <!-- end container div -->
