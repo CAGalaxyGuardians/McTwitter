@@ -42,8 +42,8 @@
 
         <div class="container">
           <div class="justify-content-sm-center">
-            <div class="col-sm-8">
-              <h2>Log in</h2>
+            <div class="col-sm-12">
+              <h2 class="text-center">I'm Log in' it!</h2>
             </div>
           </div>
         </div>
@@ -78,9 +78,33 @@
               </div>
             </div>
           </div>
+          <div class="container">
+            <div class="row justify-content-md-center">
+              <div class="col-sm-6">
+                  <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+                    <%= link_to "Forgot your password?", new_password_path(resource_name), class: "badge badge-secondary form-control"%><br />
+                  <% end -%>
+              </div>
+            </div>
+          </div>
         <% end %>
 
-        <%= render "devise/shared/links" %>
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col-sm-6">
+              <p class="text-center">Don't have an account?</p>
+              <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+                <%= link_to "Sign up!", new_registration_path(resource_name), class: "btn btn-primary btn-sm form-control" %><br />
+              <% end -%>
+            </div>
+          </div>
+        </div>
+
+
+          </div>
+        </div>
+
+
 
       </div>
     </div>
