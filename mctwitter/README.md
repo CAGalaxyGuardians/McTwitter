@@ -16,6 +16,7 @@ Things you may want to cover:
     gem 'jquery-rails'
     gem 'acts_as_votable', '~> 0.10.0'
     gem "font-awesome-rails"
+    gem 'rails_emoji_picker'
     ```
 
 
@@ -89,3 +90,11 @@ add   ```acts_as_votable  ``` and   ```belongs_to :user  ``` to Nuggets models a
 
 URL:
 http://www.mattmorgante.com/technology/votable
+
+* Emoji gem instruction
+  1. gem install -- using rails g rails_emoji_picker:install
+  2. add //= require rails_emoji_picker to application.js
+  3. add '@import rails_emoji_picker' to application.scss
+
+  URL:
+  https://github.com/ID25/rails_emoji_picker
