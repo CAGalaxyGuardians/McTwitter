@@ -1,4 +1,5 @@
 
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
@@ -7,13 +8,24 @@
 // MAIN LOGIN/SIGN UP PAGE
 .main {
   background-image: url("background_image/blue_bg_landscape.gif");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  min-height: 100vh;
 }
 // END MAIN LOGIN/SIGN UP PAGE
 
-// NUGGETS INDEX.HTML.ERB
+// NUGGETS/INDEX.HTML.ERB
 .nugget-feed-bg {
   background-image: url("background_image/orange_bg_happy.gif");
   background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.top-heading {
+  margin-top: 20px;
 }
 
 .nugget-heading {
@@ -21,7 +33,9 @@
 }
 
 .new-nugget-button {
-  color: rgba(0,0,0,0.75);
+  color: rgba(255,195,0,0.95);
+  // position: fixed;
+  // z-index: 1;
 }
 
 .new-nugget-button:hover {
@@ -46,6 +60,7 @@ table {
 	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
 	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
 }
+
 .like-nugget{
 	-webkit-animation-name: spaceboots;
 	-webkit-animation-duration: 0.8s;
@@ -54,4 +69,25 @@ table {
 	-webkit-animation-timing-function: linear;
 }// end wiggle animation
 
-// END NUGGETS INDEX.HTML.ERB
+// END NUGGETS/INDEX.HTML.ERB
+
+// NEW NUGGETS/NEW.HTML.ERB
+.new-nugget-bg {
+  background-image: url("background_image/orange_bg_happy.gif");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  min-height: 100vh;
+}
+.new-nugget-heading {
+  text-align: center;
+}
+
+.back-nugget-button {
+  color: rgba(0,0,0,0.75);
+}
+
+.back-nugget-button:hover {
+  color: black;
+}
+// END NEW/NUGGETS NEW.HTML.ERB
