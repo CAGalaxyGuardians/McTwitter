@@ -1,27 +1,44 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Nuggets</h1>
+<div class="nugget-feed-bg">
 
-<table>
-  <thead>
-    <tr>
-      <th>Message</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <p id="notice"><%= notice %></p>
 
-  <tbody>
-    <% @nuggets.each do |nugget| %>
-      <tr>
-        <td><%= nugget.message %></td>
-        <td><%= link_to 'Show', nugget %></td>
-        <td><%= link_to 'Edit', edit_nugget_path(nugget) %></td>
-        <td><%= link_to 'Destroy', nugget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <div class="container">
 
-<br>
+    <a class="new-nugget-button" href="nuggets/new"><i class="fa fa-plus-circle fa-5x" aria-hidden="true"></i></a> <!-- this is the same as link to 'new nugget', new_nugget_path  -->
+    <!-- <%= link_to 'New Nugget', new_nugget_path %> -->
 
-<%= link_to 'New Nugget', new_nugget_path %>
+    <h1 class="nugget-heading">Nuggets</h1>
+
+    <div class="row table_header">
+      <h2>Message</h2>
+    </div>
+
+
+    <div class="row nugget">
+      <% @nuggets.each do |nugget| %>
+        <p class="col-6"><%= nugget.message %></p>
+        <p class="col-6"><%= link_to 'Show ', nugget %><%= link_to 'Edit ', edit_nugget_path(nugget) %><%= link_to 'Destroy', nugget, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+
+
+        <p class="btn-group" data-toggle="buttons">
+            <!-- font-awesome -->
+             <%= link_to like_nugget_path(nugget), method: :put, class: "btn btn-outline-primary btn-sm like-nugget" do %>
+               <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+               nuggets
+               <%= nugget.get_upvotes.size %>
+             <% end %>
+             <%= link_to dislike_nugget_path(nugget), method: :put, class: "btn btn-outline-primary btn-sm like-nugget" do %>
+               <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+               unnugget
+               <%= nugget.get_downvotes.size %>
+            <% end %>
+        </p>
+        <br>
+
+      <% end %> <!-- end @nuggets.each do loop -->
+    </div>
+
+  </div> <!-- end container div -->
+
+</div> <!-- end nugget-feed-bg -->

@@ -8,6 +8,9 @@ end
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
+gem 'acts_as_votable', '~> 0.10.0'
+gem "font-awesome-rails"
+gem 'rails_emoji_picker'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
