@@ -1,0 +1,26 @@
+<%= form_with(model: nugget, local: true) do |form| %>
+  <% if nugget.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(nugget.errors.count, "error") %> prohibited this nugget from being saved:</h2>
+
+      <ul>
+      <% nugget.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :message %>
+    <p class="emoji-picker-container"><%= form.text_field :message, id: :nugget_message, class: 'form-control', data: { emojiable: true }%></p>
+
+
+
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
