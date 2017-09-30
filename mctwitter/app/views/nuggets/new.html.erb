@@ -1,5 +1,16 @@
-<h1>New Nugget</h1>
 
-<%= render 'form', nugget: @nugget %>
 
-<%= link_to 'Back', nuggets_path %>
+<div class="new-nugget-bg">
+
+  <div class="container">
+
+    <a class="back-nugget-button" href="/"><i class="fa fa-undo fa-5x" aria-hidden="true"></i></a>
+    <!-- <%= link_to 'Back', nuggets_path %> -->
+
+    <h1 class="new-nugget-heading">New Nugget</h1>
+
+    <%= render 'form', nugget: @nugget %>
+
+  </div> <!-- end container div -->
+
+</div> <!-- end new-nugget-bg div -->
