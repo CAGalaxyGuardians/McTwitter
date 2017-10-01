@@ -125,6 +125,32 @@ html, body {
   text-align: center;
   padding-top: 10%;
   color: white;
+  z-index: 10;
+}
+
+.spinning-chessburger-div {
+  z-index: 0;
+  position: fixed;
+  top: 140px;
+  right: 100px;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.spinning-chessburger {
+  height: 200px;
+  width: auto;
+}
+// spinning animation
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
 
 /* TIMELINE
