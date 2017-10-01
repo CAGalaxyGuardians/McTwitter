@@ -16,3 +16,6 @@
 //= require bootstrap-sprockets
 //= require rails_emoji_picker
 //= require_tree .
+//= require jquery3
+//= require popper
+//= require bootstrap
