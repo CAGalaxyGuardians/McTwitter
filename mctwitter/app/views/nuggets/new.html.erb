@@ -1,6 +1,37 @@
-<%= render "layouts/navbar" %>
-<h1>New Nugget</h1>
 
-<%= render 'form', nugget: @nugget %>
+<div class="new-nugget-bg">
 
-<%= link_to 'Back', nuggets_path %>
+  <div class="new-nugget-page">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col">
+          <h1 class="new-nugget-heading animated infinite jello">New Nugget</h1>
+        </div>
+      </div>
+
+      <div class="row justify-content-sm-center">
+        <div class="col-12 new-nugget-form">
+          <%= render 'form', nugget: @nugget %>
+        </div>
+      </div> <!-- end row div -->
+
+      <div class="row">
+        <div class="col">
+          <%= image_tag("Mcemojis/chickennuggets.png", alt: "mcnugget", class: "new-mcnugget animated infinite flip") %>
+        </div>
+      </div>
+
+      <div class="row new-nugget-row">
+        <div class="col">
+          <%= link_to '', nuggets_path, class: "fa fa-undo fa-5x font-awesome-icons" %>
+          <!-- <%= link_to 'Back', nuggets_path %> -->
+        </div>
+      </div> <!-- end row div -->
+
+    </div> <!-- end container div -->
+
+  </div> <!-- end new-nugget-page -->
+
+</div> <!-- end new-nugget-bg div -->
