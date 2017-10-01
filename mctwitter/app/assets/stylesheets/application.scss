@@ -4,6 +4,10 @@
 @import "font-awesome";
 @import 'rails_emoji_picker';
 
+* {
+  font-family: Arial;
+}
+
 html, body {
   max-width: 100%;
   overflow-x: hidden;
@@ -283,5 +287,39 @@ html, body {
   max-height: 100px;
   max-width: auto;
 }
-
 // END NEW/NUGGETS NEW.HTML.ERB
+
+// APP/VIEWS/NUGGETS/SHOW.HTML.ERB
+.show-nugget-bg {
+  background-image: url("background_image/green_bg_landscape.gif");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.show-nugget-page {
+  text-align: center;
+}
+
+.show-happymeal {
+  margin-top: 10%;
+  margin-bottom: 5%;
+  max-height: 200px;
+  max-width: auto;
+}
+// END APP VIEWS/NUGGETES/SHOW.HTML.ERB
+
+// APP/VIEWS/NUGGETS/EDIT.HTML.ERB
+.edit-nugget-bg {
+  background-image: url("background_image/green_bg_landscape.gif");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.edit-nugget-page {
+  text-align: center;
+}
+//END PP/VIEWS/NUGGETS/EDIT.HTML.ERB

@@ -1,9 +1,36 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Message:</strong>
-  <%= @nugget.message %>
-</p>
+<div class="show-nugget-bg"> <!-- for the background image -->
 
-<%= link_to 'Edit', edit_nugget_path(@nugget) %> |
-<%= link_to 'Back', nuggets_path %>
+  <div class="show-nugget-page">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col">
+          <%= image_tag("Mcemojis/happymeal.png", alt: "happymeal", class: "show-happymeal animated infinite pulse") %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <p>
+            <strong>Message:</strong>
+            <%= @nugget.message %>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <%= link_to 'Edit', edit_nugget_path(@nugget) %> |
+          <%= link_to 'Back', nuggets_path %>
+        </div>
+      </div>
+
+      <p id="notice"><%= notice %></p>
+
+    </div> <!-- end container div -->
+
+  </div> <!-- end show-nugget-page -->
+
+</div> <!-- end show-nugget-bg div -->

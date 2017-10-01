@@ -1,6 +1,38 @@
-<h1>Editing Nugget</h1>
 
-<%= render 'form', nugget: @nugget %>
 
-<%= link_to 'Show', @nugget %> |
-<%= link_to 'Back', nuggets_path %>
+<div class="edit-nugget-bg">
+
+  <div class="edit-nugget-page">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col">
+          <%= image_tag("Mcemojis/happymeal.png", alt: "happymeal", class: "show-happymeal animated infinite pulse") %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <h1 class="editing-nugget-heading">Editing Nugget</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <%= render 'form', nugget: @nugget %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <%= link_to 'Show', @nugget %> |
+          <%= link_to 'Back', nuggets_path %>
+        </div>
+      </div>
+
+    </div> <!-- end container div -->
+
+  </div> <!-- end edit-nugget-page -->
+
+</div> <!-- end edit-nugget-bg -->
