@@ -1,45 +1,81 @@
 
 <div class="nugget-feed-bg">
-  <%= render "layouts/navbar" %>
 
-  <p id="notice"><%= notice %></p>
+  <div class="nugget-feed-page">
 
-  <div class="container">
+    <div class="container">
 
-    <a class="new-nugget-button" href="nuggets/new"><i class="fa fa-plus-circle fa-5x" aria-hidden="true"></i></a> <!-- this is the same as link to 'new nugget', new_nugget_path  -->
-    <!-- <%= link_to 'New Nugget', new_nugget_path %> -->
+      <div class="row top-heading">
 
-    <h1 class="nugget-heading">Nuggets</h1>
+        <!-- <%= link_to 'New Nugget', new_nugget_path %> -->
 
-    <div class="row table_header">
-      <h2>Message</h2>
-    </div>
+        <p id="notice"><%= notice %></p>
+
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <h1 class="nugget-heading animated infinite tada">Nuggets</h1>
+        </div>
+
+      </div>
+
+      <section class="timeline">
+        <ul>
+          <% @nuggets.each do |nugget| %>
+          <li>
+            <div>
+              <p><%= nugget.message %></p>
+              <p class="btn-group" data-toggle="buttons">
+                <%= link_to like_nugget_path(nugget), method: :put, class: "btn btn-outline-primary btn-sm like-nugget" do %>
+                  <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                  nuggets
+                  <%= nugget.get_upvotes.size %>
+                <% end %>
+                <%= link_to dislike_nugget_path(nugget), method: :put, class: "btn btn-outline-primary btn-sm like-nugget" do %>
+                  <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                  unnugget
+                  <%= nugget.get_downvotes.size %>
+               <% end %>
+              </p>
+              <p><%= link_to 'Show ', nugget %><%= link_to 'Edit ', edit_nugget_path(nugget) %><%= link_to 'Destroy', nugget, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            </div>
+          </li>
+          <% end %> <!-- end @nuggets.each do loop -->
+        </ul>
+      </section>
 
 
-    <div class="row nugget">
-      <% @nuggets.each do |nugget| %>
-        <p class="col-6"><%= nugget.message %></p>
-        <p class="col-6"><%= link_to 'Show ', nugget %><%= link_to 'Edit ', edit_nugget_path(nugget) %><%= link_to 'Destroy', nugget, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+
+      <!-- <div class="row nugget">
+        <% @nuggets.each do |nugget| %>
+          <p class="col-6"><%= nugget.message %></p>
+          <p class="col-6"><%= link_to 'Show ', nugget %><%= link_to 'Edit ', edit_nugget_path(nugget) %><%= link_to 'Destroy', nugget, method: :delete, data: { confirm: 'Are you sure?' } %></p>
 
 
-        <p class="btn-group" data-toggle="buttons">
-            <!-- font-awesome -->
-             <%= link_to like_nugget_path(nugget), method: :put, class: "btn btn-outline-primary btn-sm like-nugget" do %>
-               <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-               nuggets
-               <%= nugget.get_upvotes.size %>
-             <% end %>
-             <%= link_to dislike_nugget_path(nugget), method: :put, class: "btn btn-outline-primary btn-sm like-nugget" do %>
-               <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-               unnugget
-               <%= nugget.get_downvotes.size %>
-            <% end %>
-        </p>
-        <br>
+          <p class="btn-group" data-toggle="buttons">
+              <! font-awesome ->
+               <%= link_to like_nugget_path(nugget), method: :put, class: "btn btn-outline-primary btn-sm like-nugget" do %>
+                 <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                 nuggets
+                 <%= nugget.get_upvotes.size %>
+               <% end %>
+               <%= link_to dislike_nugget_path(nugget), method: :put, class: "btn btn-outline-primary btn-sm like-nugget" do %>
+                 <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                 unnugget
+                 <%= nugget.get_downvotes.size %>
+              <% end %>
+          </p>
+          <br>
 
-      <% end %> <!-- end @nuggets.each do loop -->
-    </div>
+        <% end %> <! end @nuggets.each do loop ->
+      </div> <! end row nugget div -->
 
-  </div> <!-- end container div -->
+    </div> <!-- end container div -->
+
+  </div>
 
 </div> <!-- end nugget-feed-bg -->
+
+<script type="text/javascript" src="prevent_reload.js"></script>
+<script type="text/javascript" src="timeline.js"></script>
+
+<!-- onclick=onclick="validateForm(event) -->
+

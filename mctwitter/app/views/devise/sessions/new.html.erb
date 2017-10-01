@@ -25,89 +25,67 @@
 
 <%= render "devise/shared/links" %> -->
 
-<div class="main">
 
+<div class="main-bg">
+
+  <div class="login-page">
 
     <div class="container">
-      <div class="row justify-content-md-center">
-      <div class="col-sm-8">
 
-        <div class="container">
-          <div class="row justify-content-lg-center">
-            <div class="col-sm-6">
-              <%= image_tag "McDonald's_logo.png", class: "mx-auto d-block" %>
-            </div>
-          </div>
+      <div class="row justify-content-lg-center login-page-logo">
+        <div class="col-sm-6 main-page-maccas-logo">
+          <%= image_tag "McDonald's_logo.png", class: "mx-auto d-block" %>
         </div>
+      </div>
 
-        <div class="container">
-          <div class="justify-content-sm-center">
-            <div class="col-sm-12">
-              <h2 class="text-center">I'm Log in' it!</h2>
-            </div>
-          </div>
+      <div class="row">
+        <div class="col justify-content-sm-center">
+            <h2 class="animated infinite rubberBand">Log in</h2>
         </div>
+      </div>
 
 
-
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="form-group">
-            <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true, class:"form-control" %>
-          </div>
-
-          <div class="form-group">
-            <%= f.label :password %><br />
-            <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
-          </div>
-
-          <% if devise_mapping.rememberable? -%>
+      <div class="row">
+        <div class="col">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div class="form-group">
-              <%= f.check_box :remember_me %>
-              <%= f.label :remember_me %>
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true, class:"form-control" %>
             </div>
-          <% end -%>
+
+            <div class="form-group">
+              <%= f.label :password %><br />
+              <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
+            </div>
+
+            <% if devise_mapping.rememberable? -%>
+              <div class="form-group">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
+              </div>
+            <% end -%>
 
 
-          <div class="container">
-            <div class="row justify-content-md-center">
-              <div class="col-sm-6">
-                <div class="actions">
-                  <%= f.submit "Log in" ,type: "submit", class: "btn btn-danger btn-lg form-control" %>
+            <div class="container">
+              <div class="row justify-content-md-center">
+                <div class="col-sm-6">
+                  <div class="actions">
+                    <%= f.submit "Log in" ,type: "submit", class: "btn btn-danger btn-lg form-control" %>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="container">
-            <div class="row justify-content-md-center">
-              <div class="col-sm-6">
-                  <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-                    <%= link_to "Forgot your password?", new_password_path(resource_name), class: "badge badge-secondary form-control"%><br />
-                  <% end -%>
-              </div>
-            </div>
-          </div>
-        <% end %>
-
-        <div class="container">
-          <div class="row justify-content-md-center">
-            <div class="col-sm-6">
-              <p class="text-center">Don't have an account?</p>
-              <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-                <%= link_to "Sign up!", new_registration_path(resource_name), class: "btn btn-primary btn-sm form-control" %><br />
-              <% end -%>
-            </div>
-          </div>
-        </div>
-
-
-          </div>
-        </div>
+          <% end %>
+        </div> <!-- end col -->
+      </div> <!-- end row -->
 
 
 
-      </div>
-    </div>
-  </div>
+      <%= render "devise/shared/links" %>
 
-</div>
+    </div> <!-- end container -->
+
+  </div> <!-- end login-page div -->
+
+</div> <!-- end main-bg div -->
+
