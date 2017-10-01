@@ -250,26 +250,37 @@ html, body {
   min-height: 100vh;
 }
 
+.new-nugget-page {
+  text-align: center;
+}
+
 .new-nugget-row {
   margin-top: 80px;
 }
 
 .new-nugget-heading {
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  padding-top: 10%;
+  padding-bottom: 5%;
 }
 
-.back-nugget-button {
+.font-awesome-icons, .font-awesome-icons:visited {
   color: rgba(0,0,0,0.75);
 }
 
-.back-nugget-button:hover {
+.font-awesome-icons:hover {
   color: black;
+  text-decoration: none;
 }
 
 .new-nugget-form {
   margin: 0 auto;
+}
+
+.new-mcnugget {
+  margin-top: 5%;
+  max-height: 100px;
+  max-width: auto;
 }
 
 // END NEW/NUGGETS NEW.HTML.ERB
