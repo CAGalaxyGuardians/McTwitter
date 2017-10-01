@@ -17,7 +17,37 @@ html, body {
   height: 100%;
   min-height: 100vh;
 }
+
+.edit-accounts-section {
+  text-align: center;
+}
+
+.edit-account-heading {
+  padding-top: 10%;
+}
+
+.edit-account-update-button {
+  margin-top: 20px;
+}
+
+.cancel-account-heading {
+  padding-top: 20px;
+}
+
+.row .back {
+  padding-top: 20px;
+}
 // END MAIN LOGIN/SIGN UP PAGE
+
+// ACCOUNT EDIT PAGE - VIEWS/DEVISE/REGISTRATIONS/EDIT.HTML.ERB
+.edit-accounts-bg {
+  background-image: url("background_image/blue_bg_landscape.gif");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  min-height: 100vh;
+}
+// END ACCOUNT EDIT PAGE - VIEWS/DEVISE/REGISTRATIONS/EDIT.HTML.ERB
 
 // NUGGETS/INDEX.HTML.ERB
 .nugget-feed-bg {
@@ -34,7 +64,8 @@ html, body {
 
 .nugget-heading {
   text-align: center;
-  margin-top: 80px;
+  padding-top: 10%;
+  color: white;
 }
 
 .new-nugget-button {
