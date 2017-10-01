@@ -12,6 +12,20 @@ html, body {
   overflow-x: hidden;
 } // This disables horizontal scrolling
 
+// NAVIGATION
+.new-nugget-button {
+  color: rgba(255,195,0,0.95);
+}
+
+.new-nugget-button:visited {
+  color: rgba(255,195,0,0.95);
+}
+
+.new-nugget-button:hover {
+  text-decoration: none;
+}
+// END NAVIGATION
+
 // MAIN LOGIN/SIGN UP PAGE
 .main-bg {
   background-image: url("background_image/blue_bg_landscape.gif");
@@ -111,16 +125,6 @@ html, body {
   text-align: center;
   padding-top: 10%;
   color: white;
-}
-
-.new-nugget-button {
-  color: rgba(255,195,0,0.95);
-  // position: fixed;
-  // z-index: 1;
-}
-
-.new-nugget-button:visited {
-  color: rgba(255,195,0,0.95);
 }
 
 /* TIMELINE
