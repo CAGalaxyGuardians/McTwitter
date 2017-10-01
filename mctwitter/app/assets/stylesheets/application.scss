@@ -71,6 +71,11 @@ html, body {
   min-height: 100vh;
 }
 
+#notice {
+  text-align: center;
+  margin-top: 5%;
+}
+
 .top-heading {
   margin-top: 20px;
 }
@@ -321,5 +326,13 @@ html, body {
 
 .edit-nugget-page {
   text-align: center;
+}
+
+.editing-nugget-heading {
+  margin-bottom: 5%;
+}
+
+.font-awesome-show-edit-back-row {
+  margin-top: 5%;
 }
 //END PP/VIEWS/NUGGETS/EDIT.HTML.ERB
