@@ -32,8 +32,12 @@
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <% if user_signed_in? %>
+<<<<<<< HEAD
         <a class="nav-link active"> <%= link_to '', new_nugget_path, class:"fa fa-plus-circle fa-5x new-nugget-button" %> </a> <!-- new nugget/tweet link -->
           <!-- <a class="nav-link active new-nugget-button" href="nuggets/new"><i class="fa fa-plus-circle fa-5x" aria-hidden="true"></i></a> -->
+=======
+          <a class="nav-link active new-nugget-button" href="nuggets/new"><i class="fa fa-plus-circle fa-5x" aria-hidden="true"></i></a>
+>>>>>>> a7287b87fa61d0c15f1cec3d1d432c039d44831d
           <a class="nav-link" href="#"><%= link_to 'Account',  edit_user_registration_path %> </a>
           <a class="nav-link" href="#"><%= link_to 'sign out', destroy_user_session_path, :method => :delete  %></a>
       <% else %>
