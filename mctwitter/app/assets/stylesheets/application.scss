@@ -10,12 +10,21 @@ html, body {
 } // This disables horizontal scrolling
 
 // MAIN LOGIN/SIGN UP PAGE
-.main {
+.main-bg {
   background-image: url("background_image/blue_bg_landscape.gif");
   background-attachment: fixed;
   background-size: cover;
   height: 100%;
   min-height: 100vh;
+}
+
+.login-page {
+  text-align: center;
+}
+
+.login-page-logo {
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .edit-accounts-section {
