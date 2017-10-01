@@ -139,8 +139,18 @@ html, body {
   animation-timing-function: linear;
 }
 
-.spinning-chessburger {
-  height: 200px;
+.shake-fries-div {
+  z-index: 0;
+  position: fixed;
+  bottom: 50px;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.spinning-maccas {
+  height: 150px;
   width: auto;
 }
 // spinning animation
