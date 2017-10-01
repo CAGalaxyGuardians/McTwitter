@@ -1,5 +1,4 @@
 
-// @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
 @import 'rails_emoji_picker';
@@ -73,6 +72,7 @@ html, body {
 
 .nugget-heading {
   text-align: center;
+}
   padding-top: 10%;
   color: white;
 }
@@ -274,3 +274,4 @@ html, body {
 }
 
 // END NEW/NUGGETS NEW.HTML.ERB
+
