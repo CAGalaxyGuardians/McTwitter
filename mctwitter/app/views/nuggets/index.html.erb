@@ -32,13 +32,18 @@
           <li>
             <div>
               <p><strong><%= nugget.message %></strong></p>
-              <small> <%= time_ago_in_words(nugget.created_at) %> ago created by <%= nugget.user_id.try(:name) %> </small>
+              <small> <%= time_ago_in_words(nugget.created_at) %> ago created by <%= nugget.user_id.try(:name) %> </small> <br>
               <p class="btn-group" data-toggle="buttons">
                 <%= link_to like_nugget_path(nugget), method: :put, class: "btn btn-outline-danger btn-sm like-nugget" do %>
                   <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
                   nuggets
                   <%= nugget.get_upvotes.size %>
                 <% end %>
+                <%#= link_to dislike_nugget_path(nugget), method: :put, class: "btn btn-outline-danger btn-sm like-nugget" do %>
+                  <!-- <i class="fa fa-thumbs-o-down" aria-hidden="true"></i> -->
+                  <!--unnugget -->
+                  <%#= nugget.get_downvotes.size %>
+               <%# end %>
               </p>
               <p>
                 <%= link_to '', nugget, class: "fa fa-eye fa-2x font-awesome-icons" %> <!-- show link -->
