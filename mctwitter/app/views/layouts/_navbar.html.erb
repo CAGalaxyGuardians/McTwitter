@@ -32,6 +32,11 @@
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <% if user_signed_in? %>
+<<<<<<< HEAD
+=======
+      <%= link_to image_tag("McDonald's_logo.png", :type => :upload,
+          :width => 50, :height => 50, :crop => :fill), root_path %> </a>
+>>>>>>> 7fb26cc4d01e91cf8e50f9281f1d510296c9e16f
         <a class="nav-link active"> <%= link_to '', new_nugget_path, class:"fa fa-plus-circle fa-5x new-nugget-button" %> </a> <!-- new nugget/tweet link -->
           <!-- <a class="nav-link active new-nugget-button" href="nuggets/new"><i class="fa fa-plus-circle fa-5x" aria-hidden="true"></i></a> -->
           <a class="nav-link" href="#"><%= link_to 'Account',  edit_user_registration_path %> </a>
