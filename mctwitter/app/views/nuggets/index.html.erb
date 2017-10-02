@@ -4,7 +4,100 @@
   <div class="nugget-feed-page">
 
     <div class="container">
+      
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <div class="row navigation">
+        <div class="col-2 col-sm-2 col-md-2 col-lg-2 d-flex justify-content-center tiny-buttons">
+          <%= link_to '', new_nugget_path, class:"fa fa-plus-circle fa-3x new-nugget-button" %> <!-- new nugget/tweet link -->
+        </div>
+
+        <div class="col-2 col-sm-2 col-md-2 col-lg-2 d-flex justify-content-center tiny-buttons">
+          <%= link_to (image_tag "Mcemojis/chickennuggets.png", class: "my-nuggets-button"), new_nugget_path %> <!-- my nuggets only -->
+        </div>
+
+        <div class="col-4 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center tiny-buttons">
+          <%= link_to (image_tag "McDonald's_logo.png", class: "maccas-home-button"),  root_path %> <!-- home -->
+        </div>
+
+        <div class="col-2 col-sm-2 col-md-2 col-lg-2 d-flex justify-content-center tiny-buttons">
+          <%= link_to '',  edit_user_registration_path, class: "fa fa-user-o fa-3x edit-user-button" %> <!-- edit account link -->
+        </div>
+
+        <div class="col-2 col-sm-2 col-md-2 col-lg-2 d-flex justify-content-center tiny-buttons">
+          <%= link_to '', destroy_user_session_path, class: "fa fa-sign-out fa-3x sign-out-button", :method => :delete  %> <!-- sign out link -->
+        </div>
+      </div> <!-- end row div -->
+
+=======
+>>>>>>> peter
+      <div class="row top-heading">
+        <!-- <%= link_to 'New Nugget', new_nugget_path %> -->
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <h1 class="nugget-heading animated infinite tada">Nuggets</h1>
+        </div>
+      </div>
+<<<<<<< HEAD
+
+      <div class="row">
+        <div class="col">
+          <p id="notice"><%= notice %></p>
+        </div>
+      </div>
+
+      <div class="spinning-cheeseburger-div">
+        <%= image_tag("Mcemojis/cheeseburger.png", :alt => "cheeseburger", class: "spinning-maccas") %>
+      </div>
+
+=======
+
+      <div class="row">
+        <div class="col">
+          <p id="notice"><%= notice %></p>
+        </div>
+      </div>
+
+      <div class="spinning-chessburger-div">
+        <%= image_tag("Mcemojis/cheeseburger.png", :alt => "cheeseburger", class: "spinning-maccas") %>
+      </div>
+
+>>>>>>> peter
+      <div class="spinning-fries-div">
+        <%= image_tag("Mcemojis/fries.png", :alt => "fries", class: "spinning-maccas") %>
+      </div>
+
+      <section class="timeline">
+        <ul>
+          <% @nuggets.each do |nugget| %>
+          <li>
+            <div>
+              <p><%= nugget.message %></p>
+              <p class="btn-group" data-toggle="buttons">
+                <%= link_to like_nugget_path(nugget), method: :put, class: "btn btn-outline-danger btn-sm like-nugget" do %>
+                  <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                  nuggets
+                  <%= nugget.get_upvotes.size %>
+                <% end %>
+                <%= link_to dislike_nugget_path(nugget), method: :put, class: "btn btn-outline-danger btn-sm like-nugget" do %>
+                  <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                  unnugget
+                  <%= nugget.get_downvotes.size %>
+               <% end %>
+              </p>
+              <p>
+                <%= link_to '', nugget, class: "fa fa-eye fa-2x font-awesome-icons" %> <!-- show link -->
+                <%= link_to '', edit_nugget_path(nugget), class: "fa fa-pencil-square-o fa-2x font-awesome-icons" %> <!-- edit link -->
+                <%= link_to '', nugget, method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash-o fa-2x font-awesome-icons" %> <!-- destroy nugget -->
+              </p>
+            </div>
+          </li>
+          <% end %> <!-- end @nuggets.each do loop -->
+        </ul>
+      </section>
+
+
+=======
       <div class="row top-heading">
         <!-- <%= link_to 'New Nugget', new_nugget_path %> -->
         <div class="col-sm-12 col-md-12 col-lg-12">
@@ -65,6 +158,7 @@
       </section>
 
 
+>>>>>>> Takuya
 
       <!-- <div class="row nugget">
         <% @nuggets.each do |nugget| %>
@@ -96,6 +190,10 @@
 
 </div> <!-- end nugget-feed-bg -->
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> Takuya
 <script type="text/javascript" src="prevent_reload.js"></script>
 <script type="text/javascript" src="timeline.js"></script>
 
