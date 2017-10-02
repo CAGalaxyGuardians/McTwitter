@@ -5,6 +5,24 @@
 
     <div class="container">
 
+      <div class="row navigation">
+        <div class="col">
+          <%= link_to '', new_nugget_path, class:"fa fa-plus-circle fa-5x new-nugget-button" %> <!-- new nugget/tweet link -->
+        </div>
+
+        <div class="col">
+          <%= link_to (image_tag "McDonald's_logo.png", class: "maccas-home-button"),  root_path %> <!-- home -->
+        </div>
+
+        <div class="col">
+          <%= link_to '',  edit_user_registration_path, class: "fa fa-user-o fa-5x edit-user-button" %> <!-- edit account link -->
+        </div>
+
+        <div class="col">
+          <%= link_to '', destroy_user_session_path, class: "fa fa-sign-out fa-5x sign-out-button", :method => :delete  %> <!-- sign out link -->
+        </div>
+      </div> <!-- end row div -->
+
       <div class="row top-heading">
         <!-- <%= link_to 'New Nugget', new_nugget_path %> -->
         <div class="col-sm-12 col-md-12 col-lg-12">
@@ -18,7 +36,7 @@
         </div>
       </div>
 
-      <div class="spinning-chessburger-div">
+      <div class="spinning-cheeseburger-div">
         <%= image_tag("Mcemojis/cheeseburger.png", :alt => "cheeseburger", class: "spinning-maccas") %>
       </div>
 
