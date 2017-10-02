@@ -65,6 +65,7 @@
               </div>
             <% end -%>
 
+            <!--LOG IN BUTTON  -->
             <div class="row">
               <div class="col"></div>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-8 actions login-page-buttons">
@@ -78,19 +79,27 @@
         <div class="col"></div>
       </div> <!-- end form row -->
 
-      <div class="row">
-        <div class="col"></div>
 
-          <div class="col actions">
-            <%= render "devise/shared/links" %>
+      <div class="container">
+        <div class="row justify-content-md-center">
+
           <div class="col"></div>
-
-            <div class="col actions">
-              <%= link_to "Forgot your password?", new_password_path(resource_name), class: "badge badge-secondary" %><br />
-            </div>
-
+          <!--SIGN UP BUTTON -->
+          <div class="col-md-auto actions">
+            <%= render "devise/shared/links" %>
           </div>
-        <div class="col"></div>
+          <div class="col"></div>
+        </div>
+
+        <div class="row">
+
+          <div class="col"></div>
+          <!--FORGOT PASSWORD BUTTON  -->
+          <div class="col-md-auto">
+            <%= link_to "Forgot your password?", new_password_path(resource_name), class: "badge badge-secondary" %>
+          </div>
+          <div class="col"></div>
+        </div>
       </div>
 
 

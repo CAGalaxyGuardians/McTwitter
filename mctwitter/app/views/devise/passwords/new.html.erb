@@ -43,14 +43,27 @@
         <div class="col"></div>
       </div> <!-- end form row -->
 
-      <div class="row">
-        <div class="col"></div>
-          <div class="col actions">
-            <%= render "devise/shared/links" %>
-          </div>
-        <div class="col"></div>
-      </div>
+      <div class="container">
+        <div class="row justify-content-md-center">
 
+          <div class="col"></div>
+          <!--SIGN UP BUTTON -->
+          <div class="col-md-auto actions">
+            <%= link_to "Log in", new_session_path(resource_name), class: "btn btn-success btn-lg" %><br />
+          </div>
+          <div class="col"></div>
+        </div>
+
+        <div class="row">
+
+          <div class="col"></div>
+          <!--FORGOT PASSWORD BUTTON  -->
+          <div class="col-md-auto">
+            <%= link_to "Sign up", new_registration_path(resource_name), class: "btn btn-success btn-lg " %><br />
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
     </div>
 
 </div> <!-- end forgot-password-page div -->
