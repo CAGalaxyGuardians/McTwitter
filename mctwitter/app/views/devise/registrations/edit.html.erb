@@ -1,0 +1,143 @@
+
+
+
+
+<div class="edit-accounts-bg">
+  <div class="edit-accounts-section">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col">
+          <h2 class="main-heading edit-account-heading">
+             <%= resource_name.to_s.humanize %> 's Tweet </h2>
+        </div>
+      </div>
+
+      <section class="timeline">
+        <ul>
+
+              <p>
+                <% if @nugget.present? %>
+                    <% @nugget.each do |nugget| %>
+              <li>
+                <div>
+                     <%= nugget.message %>
+
+                    <p class="btn-group" data-toggle="buttons">
+                     <%= link_to like_nugget_path(nugget), method: :put, class: "btn btn-outline-danger btn-sm like-nugget" do %>
+                     <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                      nuggets
+                      <%= nugget.get_upvotes.size %>
+                      <% end %>
+
+                       <%= link_to dislike_nugget_path(nugget), method: :put, class: "btn btn-outline-danger btn-sm like-nugget" do %>
+                         <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                         unnugget
+                         <%= nugget.get_downvotes.size %>
+                      <% end %>
+                      </p>
+                      <p>
+                       <%= link_to '', nugget, class: "fa fa-eye fa-2x font-awesome-icons" %> <!-- show link -->
+                       <%= link_to '', edit_nugget_path(nugget), class: "fa fa-pencil-square-o fa-2x font-awesome-icons" %> <!-- edit link -->
+                       <%= link_to '', nugget, method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash-o fa-2x font-awesome-icons" %> <!-- destroy nugget -->
+                      </p>
+                  </div>
+              </li>
+                        <% end %>
+                 <% end %>
+              </p>
+            </div>
+
+        </ul>
+      </section>
+
+
+
+      <div class="row">
+        <div class="col">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+            <%= devise_error_messages! %>
+
+
+            <div class="field">
+              <%= f.label :name %><br />
+              <%= f.text_field :name, autofocus: true %>
+            </div>
+
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true %>
+            </div>
+
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+            <% end %>
+
+            <div class="field">
+              <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+              <%= f.password_field :password, autocomplete: "off" %>
+              <% if @minimum_password_length %>
+                <br />
+                <em><%= @minimum_password_length %> characters minimum</em>
+              <% end %>
+            </div>
+
+            <div class="field">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "off" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+              <%= f.password_field :current_password, autocomplete: "off" %>
+            </div>
+
+            <div class="actions edit-account-update-button">
+              <%= f.submit "Update", :class=>"btn btn-outline-success", :style=>"color: white;" %>
+            </div>
+          <% end %>
+        </div> <!-- end col -->
+      </div> <!-- end row -->
+
+
+     <!-- My Tweet -->
+
+
+
+
+
+
+
+
+
+      <div class="row">
+        <div class="col">
+          <h3 class="cancel-account-heading">Cancel my account</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <p>Unhappy?</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-danger" name="button"><%= link_to "Cancel my account", registration_path(resource_name), :style=>"color: white;", data: { confirm: "Are you sure?" }, method: :delete %></button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <p class="back"><%= link_to "Back", :back, :style=>"color: black;" %></p>
+        </div>
+      </div>
+
+    </div> <!-- end container div -->
+
+  </div> <!-- end edit-accounts-section -->
+
+
+</div> <!-- end edit-accounts-bg -->

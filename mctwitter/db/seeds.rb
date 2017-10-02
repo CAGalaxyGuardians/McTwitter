@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+nuggets = [
+  {message: 'Bigmacs are the best!!'},
+  {message: 'Yum Yum nuggets'},
+  {message: 'Oreo Mcflurry!!'},
+  {message: 'Cheeeeeeseburger'},
+  {message: 'Fillet-o-fish is my favorite said no-one ever'},
+  {message: 'Hashbrown bites'},
+  {message: 'Aussie BBQ Brekkie Roll'},
+  {message: 'Breakfast at mcdonalds -- Ham and Cheese Croissant'},
+  {message: 'Why is Ronald so creepy'}
+]
+
+Nugget.create(nuggets)
