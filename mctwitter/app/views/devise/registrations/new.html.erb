@@ -16,79 +16,6 @@
         </div>
       </div>
 
-
-      <div class="row">
-        <div class="col">
-
-      <div class="row justify-content-lg-center">
-        <div class="col"></div>
-        <div class="col-lg-6 col-md-8 col-sm-12">
-          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-            <%= devise_error_messages! %>
-
-            <div class="field">
-              <%= f.label :email %><br />
-              <%= f.email_field :email, autofocus: true, class:"form-control" %>
-
-      <div class="row">
-        <div class="col">
-          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-            <%= devise_error_messages! %>
-
-
-            <div class="field">
-              <%= f.label :name %><br />
-              <%= f.text_field :name, autofocus: true %>
-            </div>
-
-            <div class="field">
-              <%= f.label :email %><br />
-              <%= f.email_field :email, autofocus: true %>
-
-            </div>
-
-            <div class="field">
-              <%= f.label :password %>
-              <% if @minimum_password_length %>
-              <em>(<%= @minimum_password_length %> characters minimum)</em>
-              <% end %><br />
-
-              <%= f.password_field :password, autocomplete: "off" %>
-
-              <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
-
-              <%= f.password_field :password, autocomplete: "off" %>
-
-              <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
-
-            </div>
-
-            <div class="field">
-              <%= f.label :password_confirmation %><br />
-
-              <%= f.password_field :password_confirmation, autocomplete: "off" %>
-
-              <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
-
-              <%= f.password_field :password_confirmation, autocomplete: "off" %>
-
-              <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
-
-            </div>
-
-            <div class="row">
-              <div class="col"></div>
-
-              <div class="col actions sign-up-button">
-
-              <div class="col-lg-8 col-md-8 col-sm-8 col-8 actions sign-up-button">
-
-              <div class="col actions sign-up-button">
-
-              <div class="col-lg-8 col-md-8 col-sm-8 col-8 actions sign-up-button">
-
-                <%= f.submit "Sign up", class: "btn btn-danger btn-lg form-control" %>
-
       <div class="row justify-content-lg-center sign-up-form">
         <div class="col"></div>
           <div class="col-lg-6 col-md-8 col-sm-12">
@@ -129,30 +56,12 @@
                     <%= link_to "Log in", new_session_path(resource_name), class: "btn btn-warning btn-lg form-control text-danger login-page-buttons" %>
                   </div>
                 <div class="col"></div>
-
               </div>
-
-          <% end %>
-
-        </div>
-      </div> <!-- end row div -->
-
-        </div> <!-- end col -->
 
             <% end %>
           </div> <!-- end col -->
         <div class="col"></div>
       </div> <!-- end row -->
-
-        </div>
-      </div> <!-- end row div -->
-
-
-
-
-
-
-
 
     </div> <!-- end container -->
 
