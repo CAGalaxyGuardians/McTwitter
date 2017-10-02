@@ -1,16 +1,58 @@
-<h2>Forgot your password?</h2>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+<div class="main-bg">
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+  <div class="forgot-password-page">
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
+    <div class="container">
+      <div class="row justify-content-lg-center login-page-logo">
+        <div class="col-lg-6 main-page-maccas-logo">
+          <%= image_tag "McDonald's_logo.png", class: "mx-auto d-block" %>
+        </div>
+      </div>
 
-<%= render "devise/shared/links" %>
+      <div class="row">
+        <div class="col justify-content-sm-center">
+          <h2 class="text-center">Forgot your password?</h2>
+        </div>
+      </div>
+
+      <div class="row justify-content-lg-center">
+        <div class="col"></div>
+          <div class="col-lg-6 col-md-8 col-sm-12">
+
+            <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+              <%= devise_error_messages! %>
+
+              <div class="field">
+                <%= f.label :email %><br />
+                <%= f.email_field :email, autofocus: true, class:"form-control" %>
+              </div>
+
+
+              <div class="row justify-content-lg-center">
+                <div class="col"></div>
+                  <div class="actions col">
+                    <%= f.submit "Send me reset password instructions" %>
+                  </div>
+                <div class="col"></div>
+              </div>
+
+            <% end %>
+
+          </div> <!-- end col -->
+        <div class="col"></div>
+      </div> <!-- end form row -->
+
+      <div class="row">
+        <div class="col"></div>
+          <div class="col actions">
+            <%= render "devise/shared/links" %>
+          </div>
+        <div class="col"></div>
+      </div>
+
+    </div>
+
+</div> <!-- end forgot-password-page div -->
+
+</div> <!-- end main-bg div -->
