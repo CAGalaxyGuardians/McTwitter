@@ -13,16 +13,25 @@ html, body {
 } // This disables horizontal scrolling
 
 // NAVIGATION
-.new-nugget-button {
-  color: rgba(255,195,0,0.95);
-}
-
-.new-nugget-button:visited {
-  color: rgba(255,195,0,0.95);
-}
-
-.new-nugget-button:hover {
+.new-nugget-button:hover, .sign-out-button:hover, .edit-user-button:hover {
   text-decoration: none;
+}
+
+.new-nugget-button, .new-nugget-button:visited {
+  color: rgba(255,195,0,0.95); // yellow
+}
+
+.sign-out-button, .sign-out-button:visited {
+  color: rgba(191,12,12, 0.95); // red
+}
+
+.edit-user-button, .edit-user-button:visited {
+  color: rgba(43,179,243, 0.95); // blue
+}
+
+.maccas-home-button {
+  height: 80px;
+  width: auto;
 }
 // END NAVIGATION
 
@@ -128,11 +137,11 @@ html, body {
   z-index: 10;
 }
 
-.spinning-chessburger-div {
+.spinning-cheeseburger-div {
   z-index: 0;
   position: fixed;
-  top: 140px;
-  right: 100px;
+  top: 30%;
+  left: 20%;
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
@@ -142,7 +151,8 @@ html, body {
 .spinning-fries-div {
   z-index: 0;
   position: fixed;
-  bottom: 50px;
+  bottom: 10%;
+  right: 10%;
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
@@ -155,12 +165,12 @@ html, body {
 }
 // spinning animation
 @keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
 }
 
 /* TIMELINE

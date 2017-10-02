@@ -17,16 +17,12 @@
 
   <body>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-
-
-    <%= render "layouts/navbar" %>
-
+    <!-- <%= render "layouts/navbar" %> -->
 
 
     <%= yield %>
+    <!-- <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p> -->
     <%= javascript_include_tag('timeline.js') %>
     <%= javascript_include_tag('prevent_reload.js') %>
 
