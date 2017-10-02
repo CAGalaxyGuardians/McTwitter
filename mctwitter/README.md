@@ -98,3 +98,5 @@ http://www.mattmorgante.com/technology/votable
 
   URL:
   https://github.com/ID25/rails_emoji_picker
+
+  .
