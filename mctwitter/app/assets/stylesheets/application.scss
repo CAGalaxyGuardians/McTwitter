@@ -13,6 +13,11 @@ html, body {
 } // This disables horizontal scrolling
 
 // NAVIGATION
+
+.navigation {
+  padding-top: 5%;
+}
+
 .new-nugget-button:hover, .sign-out-button:hover, .edit-user-button:hover {
   text-decoration: none;
 }
@@ -30,8 +35,14 @@ html, body {
 }
 
 .maccas-home-button {
-  height: 80px;
+  height: 50px;
   width: auto;
+}
+
+.my-nuggets-button {
+  height: 60px;
+  width: auto;
+  padding-bottom: 10%;
 }
 // END NAVIGATION
 
@@ -132,7 +143,7 @@ html, body {
 
 .nugget-heading {
   text-align: center;
-  padding-top: 10%;
+  padding-top: 5%;
   color: white;
   z-index: 10;
 }
@@ -140,7 +151,7 @@ html, body {
 .spinning-cheeseburger-div {
   z-index: 0;
   position: fixed;
-  top: 30%;
+  top: 35%;
   left: 20%;
   animation-name: spin;
   animation-duration: 5000ms;
