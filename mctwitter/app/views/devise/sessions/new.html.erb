@@ -1,28 +1,23 @@
 <!-- <h2>Log in</h2>
-
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
-
   <div class="field">
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
-
   <% if devise_mapping.rememberable? -%>
     <div class="field">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
   <% end -%>
-
   <div class="actions">
     <%= f.submit "Log in" %>
   </div>
 <% end %>
-
 <%= render "devise/shared/links" %> -->
 
 
@@ -31,23 +26,22 @@
   <div class="login-page">
 
     <div class="container">
-
       <div class="row justify-content-lg-center login-page-logo">
-        <div class="col-sm-6 main-page-maccas-logo">
+        <div class="col-lg-6 main-page-maccas-logo">
           <%= image_tag "McDonald's_logo.png", class: "mx-auto d-block" %>
         </div>
       </div>
 
       <div class="row">
         <div class="col justify-content-sm-center">
-            <h2 class="animated infinite rubberBand">Log in' it!</h2>
+            <h2 class="text-center animated infinite rubberBand">Log in' it!</h2>
         </div>
       </div>
 
 
-      <div class="row">
+      <div class="row justify-content-lg-center">
         <div class="col"></div>
-        <div class="col">
+        <div class="col-lg-6 col-md-8 col-sm-12">
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div class="form-group">
               <%= f.label :email %><br />
@@ -66,28 +60,38 @@
               </div>
             <% end -%>
 
-
-            <div class="container">
-              <div class="row justify-content-md-center">
-                <div class="col-sm-6">
-                  <div class="actions">
-                    <%= f.submit "Log in" ,type: "submit", class: "btn btn-danger btn-lg form-control login-page-buttons" %>
-                  </div>
+            <!--LOG IN BUTTON  -->
+            <div class="row justify-content-md-center">
+              <div class="col"></div>
+                <div class="col-lg-7 col-md-7 col-sm-7 col-8 actions login-page-buttons">
+                    <%= f.submit "Log in" ,type: "submit", class: "btn btn-warning btn-lg form-control text-danger login-page-buttons" %>
                 </div>
-              </div>
+              <div class="col"></div>
             </div>
+
           <% end %>
+
+          <!--SIGN UP BUTTON -->
+          <div class="row ">
+            <div class="col"></div>
+            <div class="col-lg-7 col-md-7 col-sm-7 col-8 actions">
+              <%= link_to "Sign up", new_registration_path(resource_name), class: "btn btn-warning btn-lg form-control text-danger " %><br />
+            </div>
+            <div class="col"></div>
+          </div>
+
+          <!--FORGOT PASSWORD BUTTON  -->
+          <div class="row">
+            <div class="col"></div>
+              <div class="col-lg-7 col-md-7 col-sm-7 col-8 actions sign-up-button">
+                <%= link_to "Forgot your password?", new_password_path(resource_name), class: "btn btn-danger btn-sm form-control text-warning " %>
+              </div>
+            <div class="col"></div>
+          </div>
+
         </div> <!-- end col -->
         <div class="col"></div>
-      </div> <!-- end row -->
-
-      <div class="row">
-        <div class="col-5"></div>
-        <div class="col-2 login-page-buttons">
-          <%= render "devise/shared/links" %>
-        </div>
-        <div class="col-5"></div>
-      </div>
+      </div> <!-- end form row -->
 
     </div> <!-- end container -->
 

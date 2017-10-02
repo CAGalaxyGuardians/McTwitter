@@ -1,4 +1,3 @@
-
 @import "bootstrap";
 @import "font-awesome";
 @import 'rails_emoji_picker';
@@ -13,17 +12,37 @@ html, body {
 } // This disables horizontal scrolling
 
 // NAVIGATION
-.new-nugget-button {
-  color: rgba(255,195,0,0.95);
+.navigation {
+  padding-top: 5%;
 }
 
-.new-nugget-button:visited {
-  color: rgba(255,195,0,0.95);
-}
-
-.new-nugget-button:hover {
+.new-nugget-button:hover, .sign-out-button:hover, .edit-user-button:hover {
   text-decoration: none;
 }
+
+.new-nugget-button, .new-nugget-button:visited {
+  color: rgba(255,195,0,0.95); // yellow
+}
+
+.sign-out-button, .sign-out-button:visited {
+  color: rgba(191,12,12, 0.95); // red
+}
+
+.edit-user-button, .edit-user-button:visited {
+  color: rgba(43,179,243, 0.95); // blue
+}
+
+.maccas-home-button {
+  height: 50px;
+  width: auto;
+}
+
+.my-nuggets-button {
+  height: 60px;
+  width: auto;
+  padding-bottom: 10%;
+}
+
 // END NAVIGATION
 
 // MAIN LOGIN/SIGN UP PAGE
@@ -33,10 +52,6 @@ html, body {
   background-size: cover;
   height: 100%;
   min-height: 100vh;
-}
-
-.login-page {
-  text-align: center;
 }
 
 .login-page-logo {
@@ -82,12 +97,20 @@ html, body {
   text-align: center;
 }
 
+.sign-up-form {
+  margin-bottom: 40px;
+}
+
 .maccas-logo-page {
   margin-top: 5%;
   margin-bottom: 5%;
 }
 
-.sign-up-button {
+.password-confirmation {
+  margin-bottom: 5px;
+}
+
+.sign-up-button, .login-page-buttons {
   margin-top: 3%;
   margin-bottom: 3%;
 }
@@ -123,9 +146,16 @@ html, body {
 
 .nugget-heading {
   text-align: center;
-  padding-top: 10%;
+  padding-top: 5%;
   color: white;
   z-index: 10;
+}
+
+.spinning-cheeseburger-div {
+  z-index: 0;
+  position: fixed;
+  top: 35%;
+  left: 20%;
 }
 
 .spinning-chessburger-div {
@@ -133,6 +163,7 @@ html, body {
   position: fixed;
   top: 140px;
   right: 100px;
+
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
@@ -142,7 +173,17 @@ html, body {
 .spinning-fries-div {
   z-index: 0;
   position: fixed;
+
+  bottom: 10%;
+  right: 10%;
+
   bottom: 50px;
+
+  bottom: 50px;
+
+  bottom: 10%;
+  right: 10%;
+
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
@@ -155,12 +196,21 @@ html, body {
 }
 // spinning animation
 @keyframes spin {
+
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+
     from {
         transform:rotate(0deg);
     }
     to {
         transform:rotate(360deg);
     }
+
 }
 
 /* TIMELINE
@@ -339,6 +389,7 @@ html, body {
   text-align: center;
   padding-top: 10%;
   padding-bottom: 5%;
+  color: white;
 }
 
 .font-awesome-icons, .font-awesome-icons:visited {
@@ -347,6 +398,15 @@ html, body {
 
 .font-awesome-icons:hover {
   color: black;
+  text-decoration: none;
+}
+
+.yellow-fa-button, .yellow-fa-button:visited {
+  color: rgba(255,195,0,0.95);
+}
+
+.yellow-fa-button:hover  {
+  color: rgb(255,195,0);
   text-decoration: none;
 }
 
