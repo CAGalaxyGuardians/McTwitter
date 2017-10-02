@@ -39,24 +39,14 @@
 
       <div class="row">
         <div class="col justify-content-sm-center">
-<<<<<<< HEAD
-            <h2 class="animated infinite rubberBand">Log in' it!</h2>
-=======
             <h2 class="text-center animated infinite rubberBand">Log in' it!</h2>
->>>>>>> peter
         </div>
       </div>
 
 
-<<<<<<< HEAD
-      <div class="row">
-        <div class="col"></div>
-        <div class="col">
-=======
       <div class="row justify-content-lg-center">
         <div class="col"></div>
         <div class="col-lg-6 col-md-8 col-sm-12">
->>>>>>> peter
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div class="form-group">
               <%= f.label :email %><br />
@@ -75,60 +65,51 @@
               </div>
             <% end -%>
 
-<<<<<<< HEAD
-
-            <div class="container">
-              <div class="row justify-content-md-center">
-                <div class="col-sm-6">
-                  <div class="actions">
-                    <%= f.submit "Log in" ,type: "submit", class: "btn btn-danger btn-lg form-control login-page-buttons" %>
-                  </div>
-=======
             <div class="row">
               <div class="col"></div>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-8 actions login-page-buttons">
                   <%= f.submit "Log in" ,type: "submit", class: "btn btn-danger btn-lg form-control login-page-buttons" %>
->>>>>>> peter
+
+            <!--LOG IN BUTTON  -->
+            <div class="row justify-content-md-center">
+              <div class="col"></div>
+                <div class="col-lg-7 col-md-7 col-sm-7 col-8 actions login-page-buttons">
+                    <%= f.submit "Log in" ,type: "submit", class: "btn btn-warning btn-lg form-control text-danger login-page-buttons" %>
+
                 </div>
-                <div class="col"></div>
+              <div class="col"></div>
             </div>
 
           <% end %>
+
+          <!--SIGN UP BUTTON -->
+          <div class="row ">
+            <div class="col"></div>
+            <div class="col-lg-7 col-md-7 col-sm-7 col-8 actions">
+              <%= link_to "Sign up", new_registration_path(resource_name), class: "btn btn-warning btn-lg form-control text-danger " %><br />
+            </div>
+            <div class="col"></div>
+          </div>
+
+          <!--FORGOT PASSWORD BUTTON  -->
+          <div class="row">
+            <div class="col"></div>
+              <div class="col-lg-7 col-md-7 col-sm-7 col-8 actions sign-up-button">
+                <%= link_to "Forgot your password?", new_password_path(resource_name), class: "btn btn-danger btn-sm form-control text-warning " %>
+              </div>
+            <div class="col"></div>
+          </div>
+
         </div> <!-- end col -->
         <div class="col"></div>
-      </div> <!-- end row -->
+      </div> <!-- end form row -->
 
-      <div class="row">
-<<<<<<< HEAD
-        <div class="col-5"></div>
-        <div class="col-2 login-page-buttons">
-          <%= render "devise/shared/links" %>
-        </div>
-        <div class="col-5"></div>
-      </div>
 
-      <div class="row">
-        <div class="col">
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
-        </div>
-      </div>
-=======
+
+
+
         <div class="col"></div>
 
-          <div class="col actions">
-            <%= render "devise/shared/links" %>
-          <div class="col"></div>
-
-            <div class="col actions">
-              <%= link_to "Forgot your password?", new_password_path(resource_name), class: "badge badge-secondary" %><br />
-            </div>
-
-          </div>
-        <div class="col"></div>
-      </div>
-
->>>>>>> peter
 
     </div> <!-- end container -->
 

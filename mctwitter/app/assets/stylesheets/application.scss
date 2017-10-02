@@ -65,10 +65,6 @@ html, body {
   min-height: 100vh;
 }
 
-.login-page {
-  text-align: center;
-}
-
 .login-page-logo {
   padding-top: 5%;
   padding-bottom: 5%;
@@ -114,11 +110,18 @@ html, body {
   text-align: center;
 }
 
+.sign-up-form {
+  margin-bottom: 40px;
+}
+
 .maccas-logo-page {
   margin-top: 5%;
   margin-bottom: 5%;
 }
 
+.password-confirmation {
+  margin-bottom: 5px;
+}
 
 .sign-up-button, .login-page-buttons {
   margin-top: 3%;
