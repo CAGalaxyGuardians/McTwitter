@@ -73,35 +73,6 @@
         </ul>
       </section>
 
-      <!-- <section class="timeline">
-        <ul>
-          <% @nuggets.each do |nugget| %>
-          <li>
-            <div>
-              <p><%= nugget.message %></p>
-              <p class="btn-group" data-toggle="buttons">
-                <%= link_to like_nugget_path(nugget), method: :put, class: "btn btn-outline-danger btn-sm like-nugget" do %>
-                  <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                  nuggets
-                  <%= nugget.get_upvotes.size %>
-                <% end %>
-                <%= link_to dislike_nugget_path(nugget), method: :put, class: "btn btn-outline-danger btn-sm like-nugget" do %>
-                  <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-                  unnugget
-                  <%= nugget.get_downvotes.size %>
-               <% end %>
-              </p>
-              <p>
-                <%= link_to '', nugget, class: "fa fa-eye fa-2x font-awesome-icons" %> <!- show link ->
-                <%= link_to '', edit_nugget_path(nugget), class: "fa fa-pencil-square-o fa-2x font-awesome-icons" %> <!- edit link ->
-                <%= link_to '', nugget, method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash-o fa-2x font-awesome-icons" %> <!- destroy nugget ->
-              </p>
-            </div>
-          </li>
-          <% end %> <!- end @nuggets.each do loop ->
-        </ul>
-      </section> -->
-
     </div> <!-- end container div -->
 
   </div>
