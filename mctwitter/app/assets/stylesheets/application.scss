@@ -14,6 +14,7 @@ html, body {
 
 // NAVIGATION
 <<<<<<< HEAD
+<<<<<<< HEAD
 .new-nugget-button:hover, .sign-out-button:hover, .edit-user-button:hover {
   text-decoration: none;
 }
@@ -34,6 +35,8 @@ html, body {
   height: 80px;
   width: auto;
 =======
+=======
+>>>>>>> Takuya
 .new-nugget-button {
   color: rgba(255,195,0,0.95);
 }
@@ -44,7 +47,10 @@ html, body {
 
 .new-nugget-button:hover {
   text-decoration: none;
+<<<<<<< HEAD
 >>>>>>> peter
+=======
+>>>>>>> Takuya
 }
 // END NAVIGATION
 
@@ -87,6 +93,7 @@ html, body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .login-page-buttons {
   margin-top: 2%;
 }
@@ -96,6 +103,11 @@ html, body {
 //
 // }
 >>>>>>> peter
+=======
+.login-page-buttons {
+  margin-top: 2%;
+}
+>>>>>>> Takuya
 // END MAIN LOGIN/SIGN UP PAGE
 
 // SIGN UP PAGE VIEWS/DEVISE/REGISTRATION/NEW.HTML.ERB
@@ -117,10 +129,14 @@ html, body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .sign-up-button {
 =======
 .sign-up-button, .login-page-buttons {
 >>>>>>> peter
+=======
+.sign-up-button {
+>>>>>>> Takuya
   margin-top: 3%;
   margin-bottom: 3%;
 }
@@ -162,18 +178,24 @@ html, body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .spinning-cheeseburger-div {
   z-index: 0;
   position: fixed;
   top: 30%;
   left: 20%;
 =======
+=======
+>>>>>>> Takuya
 .spinning-chessburger-div {
   z-index: 0;
   position: fixed;
   top: 140px;
   right: 100px;
+<<<<<<< HEAD
 >>>>>>> peter
+=======
+>>>>>>> Takuya
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
@@ -184,11 +206,15 @@ html, body {
   z-index: 0;
   position: fixed;
 <<<<<<< HEAD
+<<<<<<< HEAD
   bottom: 10%;
   right: 10%;
 =======
   bottom: 50px;
 >>>>>>> peter
+=======
+  bottom: 50px;
+>>>>>>> Takuya
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
@@ -202,6 +228,7 @@ html, body {
 // spinning animation
 @keyframes spin {
 <<<<<<< HEAD
+<<<<<<< HEAD
   from {
       transform: rotate(0deg);
   }
@@ -209,13 +236,18 @@ html, body {
       transform: rotate(360deg);
   }
 =======
+=======
+>>>>>>> Takuya
     from {
         transform:rotate(0deg);
     }
     to {
         transform:rotate(360deg);
     }
+<<<<<<< HEAD
 >>>>>>> peter
+=======
+>>>>>>> Takuya
 }
 
 /* TIMELINE

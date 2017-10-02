@@ -17,6 +17,7 @@
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div class="row">
         <div class="col">
 =======
@@ -34,6 +35,22 @@
 =======
               <%= f.email_field :email, autofocus: true, class:"form-control" %>
 >>>>>>> peter
+=======
+      <div class="row">
+        <div class="col">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
+
+
+            <div class="field">
+              <%= f.label :name %><br />
+              <%= f.text_field :name, autofocus: true %>
+            </div>
+
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true %>
+>>>>>>> Takuya
             </div>
 
             <div class="field">
@@ -42,34 +59,47 @@
               <em>(<%= @minimum_password_length %> characters minimum)</em>
               <% end %><br />
 <<<<<<< HEAD
+<<<<<<< HEAD
               <%= f.password_field :password, autocomplete: "off" %>
 =======
               <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
 >>>>>>> peter
+=======
+              <%= f.password_field :password, autocomplete: "off" %>
+>>>>>>> Takuya
             </div>
 
             <div class="field">
               <%= f.label :password_confirmation %><br />
 <<<<<<< HEAD
+<<<<<<< HEAD
               <%= f.password_field :password_confirmation, autocomplete: "off" %>
 =======
               <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
 >>>>>>> peter
+=======
+              <%= f.password_field :password_confirmation, autocomplete: "off" %>
+>>>>>>> Takuya
             </div>
 
             <div class="row">
               <div class="col"></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div class="col actions sign-up-button">
 =======
               <div class="col-lg-8 col-md-8 col-sm-8 col-8 actions sign-up-button">
 >>>>>>> peter
+=======
+              <div class="col actions sign-up-button">
+>>>>>>> Takuya
                 <%= f.submit "Sign up", class: "btn btn-danger btn-lg form-control" %>
               </div>
               <div class="col"></div>
             </div>
 
           <% end %>
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>
       </div> <!-- end row div -->
@@ -78,6 +108,10 @@
         <div class="col"></div>
       </div> <!-- end row -->
 >>>>>>> peter
+=======
+        </div>
+      </div> <!-- end row div -->
+>>>>>>> Takuya
 
       <div class="row">
         <div class="col">
