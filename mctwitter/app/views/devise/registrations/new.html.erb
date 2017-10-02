@@ -16,14 +16,43 @@
         </div>
       </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       <div class="row">
         <div class="col">
+=======
+=======
+>>>>>>> ddf7a0539aa8f230084695aec026d0c32b21b79d
+      <div class="row justify-content-lg-center">
+        <div class="col"></div>
+        <div class="col-lg-6 col-md-8 col-sm-12">
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
             <%= devise_error_messages! %>
 
             <div class="field">
               <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true, class:"form-control" %>
+<<<<<<< HEAD
+>>>>>>> peter
+=======
+      <div class="row">
+        <div class="col">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
+
+
+            <div class="field">
+              <%= f.label :name %><br />
+              <%= f.text_field :name, autofocus: true %>
+            </div>
+
+            <div class="field">
+              <%= f.label :email %><br />
               <%= f.email_field :email, autofocus: true %>
+>>>>>>> Takuya
+=======
+>>>>>>> ddf7a0539aa8f230084695aec026d0c32b21b79d
             </div>
 
             <div class="field">
@@ -31,31 +60,127 @@
               <% if @minimum_password_length %>
               <em>(<%= @minimum_password_length %> characters minimum)</em>
               <% end %><br />
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
               <%= f.password_field :password, autocomplete: "off" %>
+=======
+              <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
+>>>>>>> peter
+=======
+              <%= f.password_field :password, autocomplete: "off" %>
+>>>>>>> Takuya
+=======
+              <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
+>>>>>>> ddf7a0539aa8f230084695aec026d0c32b21b79d
             </div>
 
             <div class="field">
               <%= f.label :password_confirmation %><br />
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
               <%= f.password_field :password_confirmation, autocomplete: "off" %>
+=======
+              <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
+>>>>>>> peter
+=======
+              <%= f.password_field :password_confirmation, autocomplete: "off" %>
+>>>>>>> Takuya
+=======
+              <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
+>>>>>>> ddf7a0539aa8f230084695aec026d0c32b21b79d
             </div>
 
             <div class="row">
               <div class="col"></div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
               <div class="col actions sign-up-button">
+=======
+              <div class="col-lg-8 col-md-8 col-sm-8 col-8 actions sign-up-button">
+>>>>>>> peter
+=======
+              <div class="col actions sign-up-button">
+>>>>>>> Takuya
+=======
+              <div class="col-lg-8 col-md-8 col-sm-8 col-8 actions sign-up-button">
+>>>>>>> ddf7a0539aa8f230084695aec026d0c32b21b79d
                 <%= f.submit "Sign up", class: "btn btn-danger btn-lg form-control" %>
-              </div>
-              <div class="col"></div>
-            </div>
 
+      <div class="row justify-content-lg-center sign-up-form">
+        <div class="col"></div>
+          <div class="col-lg-6 col-md-8 col-sm-12">
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= devise_error_messages! %>
+
+              <div class="field">
+                <%= f.label :email %><br />
+                <%= f.email_field :email, autofocus: true, class:"form-control" %>
+              </div>
+
+              <div class="field">
+                <%= f.label :password %>
+                <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %> characters minimum)</em>
+                <% end %><br />
+                <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
+              </div>
+
+              <div class="field password-confirmation">
+                <%= f.label :password_confirmation %><br />
+                <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
+              </div>
+
+              <!--SIGN UP BUTTON -->
+              <div class="row ">
+                <div class="col"></div>
+                <div class="col-lg-4 col-md-6 col-sm-8 col-8 actions sign-up-button">
+                   <%= f.submit "Sign up", class: "btn btn-warning btn-lg form-control text-danger " %><br />
+                </div>
+                <div class="col"></div>
+              </div>
+
+              <!--LOG IN BUTTON  -->
+              <div class="row justify-content-md-center">
+                <div class="col"></div>
+                  <div class="col-lg-4 col-md-6 col-sm-8 col-8 actions login-page-buttons">
+                    <%= link_to "Log in", new_session_path(resource_name), class: "btn btn-warning btn-lg form-control text-danger login-page-buttons" %>
+                  </div>
+                <div class="col"></div>
+
+              </div>
+
+<<<<<<< HEAD
           <% end %>
+<<<<<<< HEAD
+<<<<<<< HEAD
         </div>
       </div> <!-- end row div -->
+=======
+=======
+>>>>>>> ddf7a0539aa8f230084695aec026d0c32b21b79d
+        </div> <!-- end col -->
 
-      <div class="row">
-        <div class="col">
-          <%= render "devise/shared/links" %>
+            <% end %>
+          </div> <!-- end col -->
+        <div class="col"></div>
+      </div> <!-- end row -->
+<<<<<<< HEAD
+>>>>>>> peter
+=======
         </div>
-      </div>
+      </div> <!-- end row div -->
+>>>>>>> Takuya
+=======
+>>>>>>> ddf7a0539aa8f230084695aec026d0c32b21b79d
+
+
+
+
+
+
 
     </div> <!-- end container -->
 

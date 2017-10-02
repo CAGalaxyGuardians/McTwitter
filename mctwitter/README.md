@@ -38,7 +38,7 @@ Things you may want to cover:
 3. migrate => ```rake db:migrate```
 
 4. models =>  
-add   ```acts_as_votable  ``` and   ```belongs_to :user  ``` to Nuggets models and user model add ``` has_many: nuggets  ```
+add   ```acts_as_votable  ``` to Nuggets models
 
 5. route => create routes
   ```
@@ -99,4 +99,56 @@ http://www.mattmorgante.com/technology/votable
   URL:
   https://github.com/ID25/rails_emoji_picker
 
-  .
+*  Create Mypage
+
+ >create database association
+
+  1. create user_id to nugget
+  ```  
+  rails g migration add_user_id_to_nugget user_id:string:index
+   ```
+
+  2. model change
+  ```  
+  Nugget model => belongs_to :user
+  User model => has_many :nugget
+  ```  
+
+  3. controller
+  ```  
+  def new
+   @nugget = current_user_nugget_built
+  end
+  ```  
+    - This method would automatically fill in the user_id
+
+
+> modify user page
+
+  4. install the devise registration controller
+  ```  
+  rails generate devise:controllers [scope]
+  ```  
+
+  5. fix route
+  ```  
+  devise_for :users, controllers: { sessions: 'users/sessions' }
+  ```  
+
+  6. create function (controller)
+
+  #app/controllers/users/registrations_controller.rb  
+    ```  
+     def edit
+        @nugget = current_user.posts
+     end
+       ```  
+
+  #app/views/devise/registrations/edit.html.erb
+    ```  
+  <% if @nugget.present? %>
+     <% @nugget.each do |nugget| %>
+        <%= nugget.message %>
+     <% end %>
+  <% end %>
+    ```  

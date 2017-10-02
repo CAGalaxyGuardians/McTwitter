@@ -13,6 +13,37 @@ html, body {
 } // This disables horizontal scrolling
 
 // NAVIGATION
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+.navigation {
+  padding-top: 5%;
+}
+
+>>>>>>> ddf7a0539aa8f230084695aec026d0c32b21b79d
+.new-nugget-button:hover, .sign-out-button:hover, .edit-user-button:hover {
+  text-decoration: none;
+}
+
+.new-nugget-button, .new-nugget-button:visited {
+  color: rgba(255,195,0,0.95); // yellow
+}
+
+.sign-out-button, .sign-out-button:visited {
+  color: rgba(191,12,12, 0.95); // red
+}
+
+.edit-user-button, .edit-user-button:visited {
+  color: rgba(43,179,243, 0.95); // blue
+}
+
+.maccas-home-button {
+  height: 50px;
+  width: auto;
+=======
+=======
+>>>>>>> Takuya
 .new-nugget-button {
   color: rgba(255,195,0,0.95);
 }
@@ -23,6 +54,19 @@ html, body {
 
 .new-nugget-button:hover {
   text-decoration: none;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> peter
+=======
+>>>>>>> Takuya
+=======
+}
+
+.my-nuggets-button {
+  height: 60px;
+  width: auto;
+  padding-bottom: 10%;
+>>>>>>> ddf7a0539aa8f230084695aec026d0c32b21b79d
 }
 // END NAVIGATION
 
@@ -33,10 +77,6 @@ html, body {
   background-size: cover;
   height: 100%;
   min-height: 100vh;
-}
-
-.login-page {
-  text-align: center;
 }
 
 .login-page-logo {
@@ -64,9 +104,29 @@ html, body {
   padding-top: 20px;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 .login-page-buttons {
   margin-top: 2%;
 }
+=======
+=======
+>>>>>>> ddf7a0539aa8f230084695aec026d0c32b21b79d
+// .login-page-buttons {
+//   margin-top: 2%;
+//
+// }
+<<<<<<< HEAD
+>>>>>>> peter
+=======
+.login-page-buttons {
+  margin-top: 2%;
+}
+>>>>>>> Takuya
+=======
+
+>>>>>>> ddf7a0539aa8f230084695aec026d0c32b21b79d
 // END MAIN LOGIN/SIGN UP PAGE
 
 // SIGN UP PAGE VIEWS/DEVISE/REGISTRATION/NEW.HTML.ERB
@@ -82,12 +142,32 @@ html, body {
   text-align: center;
 }
 
+.sign-up-form {
+  margin-bottom: 40px;
+}
+
 .maccas-logo-page {
   margin-top: 5%;
   margin-bottom: 5%;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 .sign-up-button {
+=======
+.sign-up-button, .login-page-buttons {
+>>>>>>> peter
+=======
+.sign-up-button {
+>>>>>>> Takuya
+=======
+.password-confirmation {
+  margin-bottom: 5px;
+}
+
+.sign-up-button, .login-page-buttons {
+>>>>>>> ddf7a0539aa8f230084695aec026d0c32b21b79d
   margin-top: 3%;
   margin-bottom: 3%;
 }
@@ -123,16 +203,37 @@ html, body {
 
 .nugget-heading {
   text-align: center;
-  padding-top: 10%;
+  padding-top: 5%;
   color: white;
   z-index: 10;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ddf7a0539aa8f230084695aec026d0c32b21b79d
+.spinning-cheeseburger-div {
+  z-index: 0;
+  position: fixed;
+  top: 35%;
+  left: 20%;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> Takuya
 .spinning-chessburger-div {
   z-index: 0;
   position: fixed;
   top: 140px;
   right: 100px;
+<<<<<<< HEAD
+>>>>>>> peter
+=======
+>>>>>>> Takuya
+=======
+>>>>>>> ddf7a0539aa8f230084695aec026d0c32b21b79d
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
@@ -142,7 +243,21 @@ html, body {
 .spinning-fries-div {
   z-index: 0;
   position: fixed;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  bottom: 10%;
+  right: 10%;
+=======
   bottom: 50px;
+>>>>>>> peter
+=======
+  bottom: 50px;
+>>>>>>> Takuya
+=======
+  bottom: 10%;
+  right: 10%;
+>>>>>>> ddf7a0539aa8f230084695aec026d0c32b21b79d
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
@@ -155,12 +270,33 @@ html, body {
 }
 // spinning animation
 @keyframes spin {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ddf7a0539aa8f230084695aec026d0c32b21b79d
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> Takuya
     from {
         transform:rotate(0deg);
     }
     to {
         transform:rotate(360deg);
     }
+<<<<<<< HEAD
+>>>>>>> peter
+=======
+>>>>>>> Takuya
+=======
+>>>>>>> ddf7a0539aa8f230084695aec026d0c32b21b79d
 }
 
 /* TIMELINE
@@ -339,6 +475,7 @@ html, body {
   text-align: center;
   padding-top: 10%;
   padding-bottom: 5%;
+  color: white;
 }
 
 .font-awesome-icons, .font-awesome-icons:visited {
@@ -347,6 +484,15 @@ html, body {
 
 .font-awesome-icons:hover {
   color: black;
+  text-decoration: none;
+}
+
+.yellow-fa-button, .yellow-fa-button:visited {
+  color: rgba(255,195,0,0.95);
+}
+
+.yellow-fa-button:hover  {
+  color: rgb(255,195,0);
   text-decoration: none;
 }
 
