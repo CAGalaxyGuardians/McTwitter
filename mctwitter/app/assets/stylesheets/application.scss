@@ -13,6 +13,7 @@ html, body {
 } // This disables horizontal scrolling
 
 // NAVIGATION
+<<<<<<< HEAD
 .new-nugget-button:hover, .sign-out-button:hover, .edit-user-button:hover {
   text-decoration: none;
 }
@@ -32,6 +33,18 @@ html, body {
 .maccas-home-button {
   height: 80px;
   width: auto;
+=======
+.new-nugget-button {
+  color: rgba(255,195,0,0.95);
+}
+
+.new-nugget-button:visited {
+  color: rgba(255,195,0,0.95);
+}
+
+.new-nugget-button:hover {
+  text-decoration: none;
+>>>>>>> peter
 }
 // END NAVIGATION
 
@@ -73,9 +86,16 @@ html, body {
   padding-top: 20px;
 }
 
+<<<<<<< HEAD
 .login-page-buttons {
   margin-top: 2%;
 }
+=======
+// .login-page-buttons {
+//   margin-top: 2%;
+//
+// }
+>>>>>>> peter
 // END MAIN LOGIN/SIGN UP PAGE
 
 // SIGN UP PAGE VIEWS/DEVISE/REGISTRATION/NEW.HTML.ERB
@@ -96,7 +116,11 @@ html, body {
   margin-bottom: 5%;
 }
 
+<<<<<<< HEAD
 .sign-up-button {
+=======
+.sign-up-button, .login-page-buttons {
+>>>>>>> peter
   margin-top: 3%;
   margin-bottom: 3%;
 }
@@ -137,11 +161,19 @@ html, body {
   z-index: 10;
 }
 
+<<<<<<< HEAD
 .spinning-cheeseburger-div {
   z-index: 0;
   position: fixed;
   top: 30%;
   left: 20%;
+=======
+.spinning-chessburger-div {
+  z-index: 0;
+  position: fixed;
+  top: 140px;
+  right: 100px;
+>>>>>>> peter
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
@@ -151,8 +183,12 @@ html, body {
 .spinning-fries-div {
   z-index: 0;
   position: fixed;
+<<<<<<< HEAD
   bottom: 10%;
   right: 10%;
+=======
+  bottom: 50px;
+>>>>>>> peter
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
@@ -165,12 +201,21 @@ html, body {
 }
 // spinning animation
 @keyframes spin {
+<<<<<<< HEAD
   from {
       transform: rotate(0deg);
   }
   to {
       transform: rotate(360deg);
   }
+=======
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+>>>>>>> peter
 }
 
 /* TIMELINE
