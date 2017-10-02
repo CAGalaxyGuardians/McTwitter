@@ -1,15 +1,23 @@
-<%- if controller_name != 'sessions' %>
-  <%= link_to "Log in", new_session_path(resource_name), class: "log-in-button btn btn-danger btn-lg "%><br />
-<% end -%>
 
 
-<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "Sign up", new_registration_path(resource_name), class: "sign-up-button btn btn-success btn-sm" %><br />
-<% end -%>
 
-<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <%= link_to "Forgot your password?", new_password_path(resource_name), class: "forgot-password-button badge badge-secondary" %><br />
-<% end -%>
+
+    <%- if controller_name != 'sessions' %>
+      <%= link_to "Log in", new_session_path(resource_name), class: "btn btn-success btn-lg" %><br />
+    <% end -%>
+
+    <div class="row">
+      <div class="col">
+        <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+          <%= link_to "Sign up", new_registration_path(resource_name), class: "btn btn-success btn-lg " %><br />
+        <% end -%>
+
+        <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+          <%= link_to "Forgot your password?", new_password_path(resource_name), class: "badge badge-secondary" %><br />
+        <% end -%>
+      </div>
+    </div>
+
 
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>

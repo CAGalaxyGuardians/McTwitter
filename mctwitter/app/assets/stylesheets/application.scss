@@ -26,7 +26,7 @@ html, body {
 }
 // END NAVIGATION
 
-// SIGN UP PAGE VIEWS/DEVISE/REGISTRATION/NEW.HTML.ERB
+// MAIN LOGIN/SIGN UP PAGE
 .main-bg {
   background-image: url("background_image/blue_bg_landscape.gif");
   background-attachment: fixed;
@@ -67,10 +67,9 @@ html, body {
 .login-page-buttons {
   margin-top: 2%;
 }
-// END SIGN UP PAGE VIEWS/DEVISE/REGISTRATION/NEW.HTML.ERB
+// END MAIN LOGIN/SIGN UP PAGE
 
-
-// MAIN SIGN UP PAGE VIEWS/DEVISE/SESSION/NEW.HTML.ERB
+// SIGN UP PAGE VIEWS/DEVISE/REGISTRATION/NEW.HTML.ERB
 .sign-up-bg {
   background-image: url("background_image/blue_bg_landscape.gif");
   background-attachment: fixed;
@@ -79,19 +78,20 @@ html, body {
   min-height: 100vh;
 }
 
-.email-field, .password-field {
-  width: 70%;
+.sign-up-page {
+  text-align: center;
 }
 
-.log-in-button, .sign-up-button, .forgot-password-button {
+.maccas-logo-page {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.sign-up-button {
   margin-top: 3%;
   margin-bottom: 3%;
-  width: 70%;
 }
-
-// END MAIN SIGN UP PAGE VIEWS/DEVISE/SESSION/NEW.HTML.ERB
-
-
+// END SIGN UP PAGE VIEWS/DEVISE/REGISTRATION/NEW.HTML.ERB
 
 // ACCOUNT EDIT PAGE - VIEWS/DEVISE/REGISTRATIONS/EDIT.HTML.ERB
 .edit-accounts-bg {
@@ -139,8 +139,18 @@ html, body {
   animation-timing-function: linear;
 }
 
-.spinning-chessburger {
-  height: 200px;
+.spinning-fries-div {
+  z-index: 0;
+  position: fixed;
+  bottom: 50px;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.spinning-maccas {
+  height: 150px;
   width: auto;
 }
 // spinning animation
