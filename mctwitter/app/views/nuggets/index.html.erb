@@ -7,20 +7,24 @@
 
 <<<<<<< HEAD
       <div class="row navigation">
-        <div class="col">
-          <%= link_to '', new_nugget_path, class:"fa fa-plus-circle fa-5x new-nugget-button" %> <!-- new nugget/tweet link -->
+        <div class="col-2 col-sm-2 col-md-2 col-lg-2 d-flex justify-content-center tiny-buttons">
+          <%= link_to '', new_nugget_path, class:"fa fa-plus-circle fa-3x new-nugget-button" %> <!-- new nugget/tweet link -->
         </div>
 
-        <div class="col">
+        <div class="col-2 col-sm-2 col-md-2 col-lg-2 d-flex justify-content-center tiny-buttons">
+          <%= link_to (image_tag "Mcemojis/chickennuggets.png", class: "my-nuggets-button"), new_nugget_path %> <!-- my nuggets only -->
+        </div>
+
+        <div class="col-4 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center tiny-buttons">
           <%= link_to (image_tag "McDonald's_logo.png", class: "maccas-home-button"),  root_path %> <!-- home -->
         </div>
 
-        <div class="col">
-          <%= link_to '',  edit_user_registration_path, class: "fa fa-user-o fa-5x edit-user-button" %> <!-- edit account link -->
+        <div class="col-2 col-sm-2 col-md-2 col-lg-2 d-flex justify-content-center tiny-buttons">
+          <%= link_to '',  edit_user_registration_path, class: "fa fa-user-o fa-3x edit-user-button" %> <!-- edit account link -->
         </div>
 
-        <div class="col">
-          <%= link_to '', destroy_user_session_path, class: "fa fa-sign-out fa-5x sign-out-button", :method => :delete  %> <!-- sign out link -->
+        <div class="col-2 col-sm-2 col-md-2 col-lg-2 d-flex justify-content-center tiny-buttons">
+          <%= link_to '', destroy_user_session_path, class: "fa fa-sign-out fa-3x sign-out-button", :method => :delete  %> <!-- sign out link -->
         </div>
       </div> <!-- end row div -->
 
