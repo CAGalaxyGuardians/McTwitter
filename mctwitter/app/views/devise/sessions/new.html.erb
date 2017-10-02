@@ -65,23 +65,33 @@
               </div>
             <% end -%>
 
-
-            <div class="container">
-              <div class="row">
+            <div class="row">
+              <div class="col"></div>
+                <div class="col actions login-page-buttons">
+                  <%= f.submit "Log in" ,type: "submit", class: "btn btn-danger btn-lg form-control login-page-buttons" %>
+                </div>
                 <div class="col"></div>
-                  <div class="col actions">
-                    <%= f.submit "Log in" ,type: "submit", class: "btn btn-danger btn-lg form-control login-page-buttons" %>
-                  </div>
-                  <div class="col"></div>
-              </div>
             </div>
+
           <% end %>
         </div> <!-- end col -->
         <div class="col"></div>
       </div> <!-- end row -->
 
+      <div class="row">
+        <div class="col"></div>
 
-          <%= render "devise/shared/links" %>
+          <div class="col actions">
+            <%= render "devise/shared/links" %>
+          <div class="col"></div>
+
+            <div class="col actions">
+              <%= link_to "Forgot your password?", new_password_path(resource_name), class: "badge badge-secondary" %><br />
+            </div>
+
+          </div>
+        <div class="col"></div>
+      </div>
 
 
     </div> <!-- end container -->
