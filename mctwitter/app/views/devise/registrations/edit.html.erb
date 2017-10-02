@@ -11,15 +11,14 @@
         </div>
       </div>
 
-      <div class="row justify-content-lg-center">
-        <div class="col"></div>
-        <div class="col-lg-6 col-md-8 col-sm-12">
+      <div class="row">
+        <div class="col">
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
             <%= devise_error_messages! %>
 
             <div class="field">
               <%= f.label :email %><br />
-              <%= f.email_field :email, autofocus: true, class:"form-control" %>
+              <%= f.email_field :email, autofocus: true %>
             </div>
 
             <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -28,7 +27,7 @@
 
             <div class="field">
               <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-              <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
+              <%= f.password_field :password, autocomplete: "off" %>
               <% if @minimum_password_length %>
                 <br />
                 <em><%= @minimum_password_length %> characters minimum</em>
@@ -37,24 +36,19 @@
 
             <div class="field">
               <%= f.label :password_confirmation %><br />
-              <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
+              <%= f.password_field :password_confirmation, autocomplete: "off" %>
             </div>
 
             <div class="field">
               <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-              <%= f.password_field :current_password, autocomplete: "off", class:"form-control" %>
+              <%= f.password_field :current_password, autocomplete: "off" %>
             </div>
-
-
-
-
 
             <div class="actions edit-account-update-button">
               <%= f.submit "Update", :class=>"btn btn-outline-success", :style=>"color: white;" %>
             </div>
           <% end %>
         </div> <!-- end col -->
-        <div class="col"></div>
       </div> <!-- end row -->
 
       <div class="row">
@@ -77,7 +71,7 @@
 
       <div class="row">
         <div class="col">
-          <p class="back"><%= link_to "Back", :back, :style=>"color: black;" %></p>
+          <%= link_to '', :back, class: "fa fa-undo fa-4x yellow-fa-button" %> <!-- back -->
         </div>
       </div>
 

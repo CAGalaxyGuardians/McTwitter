@@ -16,24 +16,14 @@
         </div>
       </div>
 
-<<<<<<< HEAD
       <div class="row">
         <div class="col">
-=======
-      <div class="row justify-content-lg-center">
-        <div class="col"></div>
-        <div class="col-lg-6 col-md-8 col-sm-12">
->>>>>>> peter
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
             <%= devise_error_messages! %>
 
             <div class="field">
               <%= f.label :email %><br />
-<<<<<<< HEAD
               <%= f.email_field :email, autofocus: true %>
-=======
-              <%= f.email_field :email, autofocus: true, class:"form-control" %>
->>>>>>> peter
             </div>
 
             <div class="field">
@@ -41,43 +31,25 @@
               <% if @minimum_password_length %>
               <em>(<%= @minimum_password_length %> characters minimum)</em>
               <% end %><br />
-<<<<<<< HEAD
               <%= f.password_field :password, autocomplete: "off" %>
-=======
-              <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
->>>>>>> peter
             </div>
 
             <div class="field">
               <%= f.label :password_confirmation %><br />
-<<<<<<< HEAD
               <%= f.password_field :password_confirmation, autocomplete: "off" %>
-=======
-              <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
->>>>>>> peter
             </div>
 
             <div class="row">
               <div class="col"></div>
-<<<<<<< HEAD
               <div class="col actions sign-up-button">
-=======
-              <div class="col-lg-8 col-md-8 col-sm-8 col-8 actions sign-up-button">
->>>>>>> peter
                 <%= f.submit "Sign up", class: "btn btn-danger btn-lg form-control" %>
               </div>
               <div class="col"></div>
             </div>
 
           <% end %>
-<<<<<<< HEAD
         </div>
       </div> <!-- end row div -->
-=======
-        </div> <!-- end col -->
-        <div class="col"></div>
-      </div> <!-- end row -->
->>>>>>> peter
 
       <div class="row">
         <div class="col">
