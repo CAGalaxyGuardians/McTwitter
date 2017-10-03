@@ -65,7 +65,7 @@
                 <% end %>
               </p>
               <small> <%= time_ago_in_words(nugget.created_at) %> ago created by <%= nugget.user.try(:name) %> </small>
-              
+
             </div>
           </li>
         <% end %> <!-- end @nuggets.each do loop -->

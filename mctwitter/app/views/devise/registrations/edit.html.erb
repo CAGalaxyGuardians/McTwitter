@@ -79,9 +79,39 @@
         </div>
       </div>
 
+      <section class="timeline">
+        <ul>
+          <p>
+            <% if @nugget.present? %>
+                <% @nugget.each do |nugget| %>
+                  <li>
+                    <div>
+                      <p><strong><%= nugget.message %></strong></p>
+                      <p class="btn-group" data-toggle="buttons">
+                        <%= link_to like_nugget_path(nugget), method: :put, class: "btn btn-outline-danger btn-sm like-nugget" do %>
+                          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                          nuggets
+                          <%= nugget.get_upvotes.size %>
+                        <% end %>
+                      </p>
+                      <p>
+                        <%= link_to '', nugget, class: "fa fa-eye fa-2x font-awesome-icons" %> <!-- show link -->
+                        <% if nugget.user == current_user %>
+                        <%= link_to '', edit_nugget_path(nugget), class: "fa fa-pencil-square-o fa-2x font-awesome-icons" %> <!-- edit link -->
+                        <%= link_to '', nugget, method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash-o fa-2x font-awesome-icons" %> <!-- destroy nugget -->
+                        <% end %>
+                      </p>
+                    </div>
+                  </li>
+                <% end %>
+             <% end %>
+          </p>
+        </ul>
+      </section>
+
       <div class="row">
         <div class="col">
-          <p class="back"><%= link_to "Back", :back, :style=>"color: black;" %></p>
+          <p class="back"><%= link_to "Back", root_path, :style=>"color: black;" %></p>
         </div>
       </div>
 
