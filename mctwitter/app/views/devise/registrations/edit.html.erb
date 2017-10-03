@@ -93,7 +93,7 @@
         <ul>
           <p>
             <% if @nugget.present? %>
-                <% @nugget.each do |nugget| %>
+                <% @nugget.reverse_each do |nugget| %>
                   <li>
                     <div>
                       <p><strong><%= nugget.message %></strong></p>
