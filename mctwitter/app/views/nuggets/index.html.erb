@@ -64,8 +64,7 @@
                 <%= link_to '', nugget, method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash-o fa-2x font-awesome-icons" %> <!-- destroy nugget -->
                 <% end %>
               </p>
-              <small> <%= time_ago_in_words(nugget.created_at) %> ago created by <%= nugget.user.try(:name) %> </small>
-              
+              <p class="time-stamp"><small> <%= time_ago_in_words(nugget.created_at) %> ago created by <%= nugget.user.try(:name) %> </small></p>
             </div>
           </li>
         <% end %> <!-- end @nuggets.each do loop -->

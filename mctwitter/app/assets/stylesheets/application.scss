@@ -47,7 +47,7 @@ html, body {
 
 // MAIN LOGIN/SIGN UP PAGE
 .main-bg {
-  background-image: url("background_image/blue_bg_landscape.gif");
+  background-image: url(image-path(‘background_image/blue_bg_landscape.gif’));
   background-attachment: fixed;
   background-size: cover;
   height: 100%;
@@ -59,12 +59,12 @@ html, body {
   padding-bottom: 5%;
 }
 
-.edit-accounts-section {
-  text-align: center;
+.form-labels {
+  margin-top: 5%;
 }
 
-.edit-account-heading {
-  padding-top: 10%;
+.edit-accounts-section {
+  text-align: center;
 }
 
 .edit-account-update-button {
@@ -86,7 +86,7 @@ html, body {
 
 // SIGN UP PAGE VIEWS/DEVISE/REGISTRATION/NEW.HTML.ERB
 .sign-up-bg {
-  background-image: url("background_image/blue_bg_landscape.gif");
+  background-image: url(image-path(‘background_image/blue_bg_landscape.gif’));
   background-attachment: fixed;
   background-size: cover;
   height: 100%;
@@ -118,7 +118,7 @@ html, body {
 
 // ACCOUNT EDIT PAGE - VIEWS/DEVISE/REGISTRATIONS/EDIT.HTML.ERB
 .edit-accounts-bg {
-  background-image: url("background_image/blue_bg_landscape.gif");
+  background-image: url(image-path(‘background_image/blue_bg_landscape.gif’));
   background-attachment: fixed;
   background-size: cover;
   height: 100%;
@@ -128,11 +128,16 @@ html, body {
 
 // NUGGETS/INDEX.HTML.ERB
 .nugget-feed-bg {
-  background-image: url("background_image/orange_bg_happy.gif");
+  background-image: url(image-path(‘background_image/orange_bg_happy.gif’));
   background-attachment: fixed;
   background-size: cover;
   height: 100%;
   min-height: 100vh;
+}
+
+
+.nugget-feed-page{
+  text-align: center;
 }
 
 #notice {
@@ -193,8 +198,8 @@ html, body {
     to {
         transform:rotate(360deg);
     }
-
 }
+
 
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -353,7 +358,7 @@ html, body {
 
 // NEW NUGGETS/NEW.HTML.ERB
 .new-nugget-bg {
-  background-image: url("background_image/orange_bg_happy.gif");
+  background-image: url(image-path(‘background_image/orange_bg_happy.gif’));
   background-attachment: fixed;
   background-size: cover;
   height: 100%;
@@ -397,6 +402,10 @@ html, body {
   margin: 0 auto;
 }
 
+.new-nugget-message-field {
+  margin-bottom: 20px;
+}
+
 .new-mcnugget {
   margin-top: 5%;
   max-height: 100px;
@@ -406,7 +415,7 @@ html, body {
 
 // APP/VIEWS/NUGGETS/SHOW.HTML.ERB
 .show-nugget-bg {
-  background-image: url("background_image/green_bg_landscape.gif");
+  background-image: url(image-path(‘background_image/green_bg_landscape.gif’));
   background-attachment: fixed;
   background-size: cover;
   height: 100%;
@@ -427,7 +436,7 @@ html, body {
 
 // APP/VIEWS/NUGGETS/EDIT.HTML.ERB
 .edit-nugget-bg {
-  background-image: url("background_image/green_bg_landscape.gif");
+  background-image: url(image-path(‘background_image/green_bg_landscape.gif’));
   background-attachment: fixed;
   background-size: cover;
   height: 100%;
