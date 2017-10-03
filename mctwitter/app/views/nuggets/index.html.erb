@@ -50,7 +50,7 @@
           <li>
             <div>
               <p><strong><%= nugget.message %></strong></p>
-              
+
               <p class="btn-group" data-toggle="buttons">
                 <%= link_to like_nugget_path(nugget), method: :put, class: "btn btn-outline-danger btn-sm like-nugget" do %>
                   <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
@@ -66,6 +66,7 @@
                 <% end %>
               </p>
               <small> <%= time_ago_in_words(nugget.created_at) %> ago created by <%= nugget.user.try(:name) %> </small>
+              
             </div>
           </li>
         <% end %> <!-- end @nuggets.each do loop -->
