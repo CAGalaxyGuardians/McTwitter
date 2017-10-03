@@ -60,8 +60,10 @@
               </p>
               <p>
                 <%= link_to '', nugget, class: "fa fa-eye fa-2x font-awesome-icons" %> <!-- show link -->
+                <% if nugget.user == current_user %>
                 <%= link_to '', edit_nugget_path(nugget), class: "fa fa-pencil-square-o fa-2x font-awesome-icons" %> <!-- edit link -->
                 <%= link_to '', nugget, method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash-o fa-2x font-awesome-icons" %> <!-- destroy nugget -->
+                <% end %>
               </p>
             </div>
           </li>
