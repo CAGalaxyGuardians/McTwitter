@@ -4,7 +4,8 @@ class NuggetsController < ApplicationController
   # GET /nuggets
   # GET /nuggets.json
   def index
-    @nuggets = Nugget.all
+    @nuggets = Nugget.order("created_at desc")
+    # @nuggets = Nugget.all
   end
 
   # GET /nuggets/1
@@ -14,7 +15,7 @@ class NuggetsController < ApplicationController
 
   # GET /nuggets/new
   def new
-    @nugget = Nugget.new
+    @nugget = current_user.nugget.build
   end
 
   # GET /nuggets/1/edit
@@ -24,7 +25,7 @@ class NuggetsController < ApplicationController
   # POST /nuggets
   # POST /nuggets.json
   def create
-    @nugget = Nugget.new(nugget_params)
+    @nugget = current_user.nugget.build(nugget_params)
 
     respond_to do |format|
       if @nugget.save
@@ -83,6 +84,6 @@ class NuggetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def nugget_params
-      params.require(:nugget).permit(:message)
+      params.require(:nugget).permit(:name,:message)
     end
 end
