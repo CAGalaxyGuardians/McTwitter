@@ -8,7 +8,7 @@
         </div>
 
         <div class="col-2 col-sm-2 col-md-2 col-lg-2 d-flex justify-content-center tiny-buttons">
-          <%= link_to (image_tag "Mcemojis/chickennuggets.png", class: "my-nuggets-button"), new_nugget_path %> <!-- my nuggets only -->
+          <%= link_to (image_tag "Mcemojis/chickennuggets.png", class: "my-nuggets-button"), nuggets_mynugget_path %> <!-- my nuggets only -->
         </div>
 
         <div class="col-4 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center tiny-buttons">
@@ -64,8 +64,8 @@
                 <%= link_to '', nugget, method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash-o fa-2x font-awesome-icons" %> <!-- destroy nugget -->
                 <% end %>
               </p>
-              <small> <%= time_ago_in_words(nugget.created_at) %> ago created by <%= nugget.user.try(:name) %> </small>
-              
+
+              <p class="time-stamp"><small> <%= time_ago_in_words(nugget.created_at) %> ago created by <%= nugget.user.try(:name) %> </small></p>
             </div>
           </li>
         <% end %> <!-- end @nuggets.each do loop -->

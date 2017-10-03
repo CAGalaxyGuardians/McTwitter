@@ -74,7 +74,9 @@ class NuggetsController < ApplicationController
     redirect_back fallback_location: root_path
   end
 
-
+  def mynugget
+    @nugget = current_user.nugget
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users , controllers: { registrations: 'users/registrations' }
+
+  get "nuggets/mynugget", to:"nuggets#mynugget"
+
   resources :nuggets do
     member do
       put "like", to: "nuggets#upvote"
@@ -9,7 +12,7 @@ Rails.application.routes.draw do
 
   root   "nuggets#index"
 
-  get "nuggets/new", to: "nuggets#new"
+  
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

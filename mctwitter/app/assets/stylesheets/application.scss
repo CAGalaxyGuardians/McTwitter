@@ -59,12 +59,12 @@ html, body {
   padding-bottom: 5%;
 }
 
-.edit-accounts-section {
-  text-align: center;
+.form-labels {
+  margin-top: 5%;
 }
 
-.edit-account-heading {
-  padding-top: 10%;
+.edit-accounts-section {
+  text-align: center;
 }
 
 .edit-account-update-button {
@@ -135,6 +135,11 @@ html, body {
   min-height: 100vh;
 }
 
+
+.nugget-feed-page{
+  text-align: center;
+}
+
 #notice {
   text-align: center;
   margin-top: 5%;
@@ -193,8 +198,8 @@ html, body {
     to {
         transform:rotate(360deg);
     }
-
 }
+
 
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -395,6 +400,10 @@ html, body {
 
 .new-nugget-form {
   margin: 0 auto;
+}
+
+.new-nugget-message-field {
+  margin-bottom: 20px;
 }
 
 .new-mcnugget {
