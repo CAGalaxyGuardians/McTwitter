@@ -413,6 +413,16 @@ html, body {
 }
 // END NEW/NUGGETS NEW.HTML.ERB
 
+// APP/VIEWS/NUGGETS/MYNUGGET.HTML.ERB
+.my-nuggets-bg {
+  background-image: url(image-path("background_image/red_bg_landscape.gif"));
+}
+
+.my-nuggets-heading {
+  color: white;
+}
+// END APP/VIEWS/NUGGETS/MYNUGGET.HTML.ERB
+
 // APP/VIEWS/NUGGETS/SHOW.HTML.ERB
 .show-nugget-bg {
   background-image: url(image-path("background_image/green_bg_landscape.gif"));

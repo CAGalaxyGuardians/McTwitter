@@ -1,13 +1,26 @@
-<div class="edit-accounts-bg">
+<div class="my-nuggets-bg">
 
   <div class="edit-accounts-section">
 
     <div class="container">
+
       <div class="row">
         <div class="col">
-          <h2 class="main-heading edit-account-heading"></h2>
+          <%= image_tag "McDonald's_logo.png", class: "mx-auto d-block maccas-logo-page" %>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col">
+          <h2 class="main-heading my-nuggets-heading">My Nuggets</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <p class="back"><%= link_to "", root_path, class: "fa fa-undo fa-4x yellow-fa-button" %></p>
+        </div>
+      </div> <!-- end row -->
 
       <section class="timeline">
         <ul>
@@ -25,10 +38,10 @@
                         <% end %>
                       </p>
                       <p>
-                        <%= link_to '', nugget, class: "fa fa-eye fa-2x font-awesome-icons" %> <!-- show link -->
+                        <%= link_to '', nugget, class: "fa fa-eye fa-2x font-awesome-icons col-2" %> <!-- show link -->
                         <% if nugget.user == current_user %>
-                        <%= link_to '', edit_nugget_path(nugget), class: "fa fa-pencil-square-o fa-2x font-awesome-icons" %> <!-- edit link -->
-                        <%= link_to '', nugget, method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash-o fa-2x font-awesome-icons" %> <!-- destroy nugget -->
+                        <%= link_to '', edit_nugget_path(nugget), class: "fa fa-pencil-square-o fa-2x font-awesome-icons col-2" %> <!-- edit link -->
+                        <%= link_to '', nugget, method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash-o fa-2x font-awesome-icons col-2" %> <!-- destroy nugget -->
                         <% end %>
                       </p>
                       <p class="time-stamp"><small> <%= time_ago_in_words(nugget.created_at) %> ago </small></p>
@@ -39,11 +52,13 @@
           </p>
         </ul>
       </section>
+
       <div class="row">
         <div class="col">
           <p class="back"><%= link_to "", root_path, class: "fa fa-undo fa-4x yellow-fa-button" %></p>
         </div>
-      </div>
-    </div>
+      </div> <!-- end row -->
+
+    </div> <!-- end container -->
   </div>
 </div>
