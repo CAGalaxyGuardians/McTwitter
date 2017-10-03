@@ -25,9 +25,8 @@
       </div> <!-- end row navigation div -->
 
       <div class="row top-heading">
-        <!-- <%= link_to 'New Nugget', new_nugget_path %> -->
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <h1 class="nugget-heading animated infinite tada">Nuggets</h1>
+          <h1 class="nugget-heading animated infinite tada">Feed Me Nuggets!</h1>
         </div>
       </div>
 
@@ -46,11 +45,11 @@
       </div>
       <section class="timeline">
         <ul>
-          <% @nuggets.reverse_each do |nugget| %>
+          <% @nuggets.each do |nugget| %>
           <li>
             <div>
               <p><strong><%= nugget.message %></strong></p>
-              <small> <%= time_ago_in_words(nugget.created_at) %> ago created by <%= nugget.user_id.try(:name) %> </small> <br>
+              <small> <%= time_ago_in_words(nugget.created_at) %> ago created by <%= nugget.user.try(:name) %> </small> <br>
               <p class="btn-group" data-toggle="buttons">
                 <%= link_to like_nugget_path(nugget), method: :put, class: "btn btn-outline-danger btn-sm like-nugget" do %>
                   <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
@@ -60,8 +59,10 @@
               </p>
               <p>
                 <%= link_to '', nugget, class: "fa fa-eye fa-2x font-awesome-icons" %> <!-- show link -->
+                <% if nugget.user == current_user %>
                 <%= link_to '', edit_nugget_path(nugget), class: "fa fa-pencil-square-o fa-2x font-awesome-icons" %> <!-- edit link -->
                 <%= link_to '', nugget, method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash-o fa-2x font-awesome-icons" %> <!-- destroy nugget -->
+                <% end %>
               </p>
             </div>
           </li>
