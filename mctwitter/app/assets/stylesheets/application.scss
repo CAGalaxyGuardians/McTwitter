@@ -135,6 +135,10 @@ html, body {
   min-height: 100vh;
 }
 
+.nugget-feed-page {
+  text-align: center;
+}
+
 #notice {
   text-align: center;
   margin-top: 5%;
@@ -193,7 +197,6 @@ html, body {
     to {
         transform:rotate(360deg);
     }
-
 }
 
 .time-stamp {
@@ -399,6 +402,10 @@ html, body {
 
 .new-nugget-form {
   margin: 0 auto;
+}
+
+.new-nugget-message-field {
+  margin-bottom: 20px;
 }
 
 .new-mcnugget {

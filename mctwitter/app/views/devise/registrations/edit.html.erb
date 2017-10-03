@@ -18,7 +18,7 @@
 
             <div class="field">
               <%= f.label :name %><br />
-              <%= f.text_field :name, autofocus: true %>
+              <%= f.text_field :name, autofocus: true, class:"form-control" %>
             </div>
 
             <div class="field">
@@ -89,7 +89,7 @@
         <ul>
           <p>
             <% if @nugget.present? %>
-                <% @nugget.each do |nugget| %>
+                <% @nugget.reverse_each do |nugget| %>
                   <li>
                     <div>
                       <p><strong><%= nugget.message %></strong></p>
@@ -107,6 +107,7 @@
                         <%= link_to '', nugget, method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash-o fa-2x font-awesome-icons" %> <!-- destroy nugget -->
                         <% end %>
                       </p>
+                      <p class="time-stamp"><small> <%= time_ago_in_words(nugget.created_at) %> ago </small></p>
                     </div>
                   </li>
                 <% end %>
