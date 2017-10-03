@@ -19,19 +19,22 @@
       <div class="col-lg-6 col-md-10 col-sm-12">
         <div class="field new-nugget-message-field">
           <%= form.label :message %>
-          <%= form.text_field :message, id: :nugget_message, class: 'form-control', data: { emojiable: true }%>
+          <p class="emoji-picker-container">
+          <%= form.text_field :message, data: { emojiable: true }, class: 'form-control'%>
+        </p>
         </div>
       </div>
     <div class="col"></div>
   </div>
 
-        <div class="row ">
-          <div class="col"></div>
-            <div class="col-lg-2 col-md-4 col-sm-7 col-8 actions">
-            <%= form.submit "Create nugget", class: "btn btn-warning btn-sm form-control text-danger "  %>
-            </div>
-          <div class="col"></div>
-        </div>
+
+  <div class="row ">
+    <div class="col"></div>
+      <div class="col-lg-2 col-md-4 col-sm-7 col-8 actions">
+      <%= form.submit "Create nugget", class: "btn btn-warning btn-sm form-control text-danger "  %>
+      </div>
+    <div class="col"></div>
+  </div>
 
 
 
