@@ -58,10 +58,10 @@
                 <% end %>
               </p>
               <p>
-                <%= link_to '', nugget, class: "fa fa-eye fa-2x font-awesome-icons" %> <!-- show link -->
+                <%= link_to '', nugget, class: "fa fa-eye fa-2x font-awesome-icons col-2" %> <!-- show link -->
                 <% if nugget.user == current_user %>
-                <%= link_to '', edit_nugget_path(nugget), class: "fa fa-pencil-square-o fa-2x font-awesome-icons" %> <!-- edit link -->
-                <%= link_to '', nugget, method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash-o fa-2x font-awesome-icons" %> <!-- destroy nugget -->
+                <%= link_to '', edit_nugget_path(nugget), class: "fa fa-pencil-square-o fa-2x font-awesome-icons col-2" %> <!-- edit link -->
+                <%= link_to '', nugget, method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash-o fa-2x font-awesome-icons col-2" %> <!-- destroy nugget -->
                 <% end %>
               </p>
 
