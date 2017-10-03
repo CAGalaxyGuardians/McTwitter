@@ -3,6 +3,11 @@
   <div class="edit-accounts-section">
 
     <div class="container">
+      <div class="row">
+        <div class="col">
+          <%= image_tag "McDonald's_logo.png", class: "mx-auto d-block maccas-logo-page" %>
+        </div>
+      </div>
 
       <div class="row">
         <div class="col">
@@ -17,13 +22,13 @@
             <%= devise_error_messages! %>
 
             <div class="field">
-              <%= f.label :name %><br />
-              <%= f.text_field :name, autofocus: true, class:"form-control" %>
+              <%= f.label :name, class: "form-labels" %><br />
+              <%= f.text_field :name,placeholder: "Richard McDonald", autofocus: true, class:"form-control"  %>
             </div>
 
             <div class="field">
-              <%= f.label :email %><br />
-              <%= f.email_field :email, autofocus: true, class:"form-control" %>
+              <%= f.label :email, class: "form-labels" %><br />
+              <%= f.email_field :email, placeholder: "maurice@mcdonald.com", autofocus: true, class:"form-control"  %>
             </div>
 
             <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -31,22 +36,21 @@
             <% end %>
 
             <div class="field">
-              <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-              <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
+              <%= f.label :password, class: "form-labels" %> <br />
+              <%= f.password_field :password, placeholder: "leave blank if you don't want to change it", autocomplete: "off", class:"form-control" %>
               <% if @minimum_password_length %>
-                <br />
                 <em><%= @minimum_password_length %> characters minimum</em>
               <% end %>
             </div>
 
             <div class="field">
-              <%= f.label :password_confirmation %><br />
+              <%= f.label :password_confirmation, class: "form-labels" %><br />
               <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
             </div>
 
             <div class="field">
-              <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-              <%= f.password_field :current_password, autocomplete: "off", class:"form-control" %>
+              <%= f.label :current_password, class: "form-labels" %> <br />
+              <%= f.password_field :current_password,placeholder: "we need your current password to confirm your changes", autocomplete: "off", class:"form-control" %>
             </div>
 
 
@@ -54,7 +58,7 @@
 
 
             <div class="actions edit-account-update-button">
-              <%= f.submit "Update", :class=>"btn btn-outline-warning", :style=>"color: white;" %>
+              <%= f.submit "Update", class: "btn btn-outline-warning", style: "color: white;" %>
             </div>
           <% end %>
         </div> <!-- end col -->
@@ -89,7 +93,7 @@
         <ul>
           <p>
             <% if @nugget.present? %>
-                <% @nugget.each do |nugget| %>
+                <% @nugget.reverse_each do |nugget| %>
                   <li>
                     <div>
                       <p><strong><%= nugget.message %></strong></p>
