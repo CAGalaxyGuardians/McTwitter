@@ -47,7 +47,7 @@ html, body {
 
 // MAIN LOGIN/SIGN UP PAGE
 .main-bg {
-  background-image: url("background_image/blue_bg_landscape.gif");
+  background-image: url(image-path("background_image/blue_bg_landscape.gif"));
   background-attachment: fixed;
   background-size: cover;
   height: 100%;
@@ -86,7 +86,7 @@ html, body {
 
 // SIGN UP PAGE VIEWS/DEVISE/REGISTRATION/NEW.HTML.ERB
 .sign-up-bg {
-  background-image: url("background_image/blue_bg_landscape.gif");
+  background-image: url(image-path("background_image/blue_bg_landscape.gif"));
   background-attachment: fixed;
   background-size: cover;
   height: 100%;
@@ -118,7 +118,7 @@ html, body {
 
 // ACCOUNT EDIT PAGE - VIEWS/DEVISE/REGISTRATIONS/EDIT.HTML.ERB
 .edit-accounts-bg {
-  background-image: url("background_image/blue_bg_landscape.gif");
+  background-image: url(image-path("background_image/blue_bg_landscape.gif"));
   background-attachment: fixed;
   background-size: cover;
   height: 100%;
@@ -128,7 +128,7 @@ html, body {
 
 // NUGGETS/INDEX.HTML.ERB
 .nugget-feed-bg {
-  background-image: url("background_image/orange_bg_happy.gif");
+  background-image: url(image-path("background_image/orange_bg_happy.gif"));
   background-attachment: fixed;
   background-size: cover;
   height: 100%;
@@ -358,7 +358,7 @@ html, body {
 
 // NEW NUGGETS/NEW.HTML.ERB
 .new-nugget-bg {
-  background-image: url("background_image/orange_bg_happy.gif");
+  background-image: url(image-path("background_image/orange_bg_happy.gif"));
   background-attachment: fixed;
   background-size: cover;
   height: 100%;
@@ -415,7 +415,7 @@ html, body {
 
 // APP/VIEWS/NUGGETS/SHOW.HTML.ERB
 .show-nugget-bg {
-  background-image: url("background_image/green_bg_landscape.gif");
+  background-image: url(image-path("background_image/green_bg_landscape.gif"));
   background-attachment: fixed;
   background-size: cover;
   height: 100%;
@@ -436,7 +436,7 @@ html, body {
 
 // APP/VIEWS/NUGGETS/EDIT.HTML.ERB
 .edit-nugget-bg {
-  background-image: url("background_image/green_bg_landscape.gif");
+  background-image: url(image-path("background_image/green_bg_landscape.gif"));
   background-attachment: fixed;
   background-size: cover;
   height: 100%;
