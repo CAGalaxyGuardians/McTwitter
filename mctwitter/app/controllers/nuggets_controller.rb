@@ -4,7 +4,7 @@ class NuggetsController < ApplicationController
   # GET /nuggets
   # GET /nuggets.json
   def index
-    @nuggets = Nugget.order("created_at desc").limit(3)
+    @nuggets = Nugget.order("created_at desc")
     # @nuggets = Nugget.all
   end
 

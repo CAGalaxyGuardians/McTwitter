@@ -156,14 +156,6 @@ html, body {
   position: fixed;
   top: 35%;
   left: 20%;
-}
-
-.spinning-chessburger-div {
-  z-index: 0;
-  position: fixed;
-  top: 140px;
-  right: 100px;
-
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
@@ -173,17 +165,8 @@ html, body {
 .spinning-fries-div {
   z-index: 0;
   position: fixed;
-
   bottom: 10%;
   right: 10%;
-
-  bottom: 50px;
-
-  bottom: 50px;
-
-  bottom: 10%;
-  right: 10%;
-
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
